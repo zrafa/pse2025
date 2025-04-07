@@ -1,0 +1,69 @@
+1- Instalar un toochain para cross-compiling a AVR. Tambien avrdude.
+	¿Qué paquetes componen el toolchain para AVR en su sistema?
+
+AVR cross compiling toolchain-> es palabra simples: me compila el codigo en c para que
+el microcontrolador lo comprenda
+AVR DUDE-> envia el codigo a la placa
+
+PAQUETES DEL TOOLCHAIN en Debian
+
+avr-gcc	: Convierte tu código C en lenguaje máquina para AVR.
+avr-as  :  Convierte código en ensamblador a binario.
+avr-ld	: Une todos los .o y bibliotecas en un ejecutable .elf.
+avr-objcopy	: Convierte el .elf a .hex, que se puede grabar en el microcontrolador.
+avr-objdump	: Permite ver el contenido del binario .elf en ensamblador.
+avr-size	: Muestra el tamaño que ocupa tu programa en memoria.
+avr-gdb	: Permite debuggear código si tenés el hardware adecuado.
+avr-libc	Biblioteca estándar de C para AVR (funciones como memcpy, delay, etc).
+
+
+
+3- Al ejecutar led-test 
+file led-test
+led-test: ELF 32-bit LSB executable, Atmel AVR 8-bit, version 1 (SYSV), statically linked, with debug_info, not stripped
+
+
+4- Donde estan los binutiles 
+/usr/bin/avr-objdump
+
+5- Donde estan los encabezados y bibliotecas
+en ls /usr/lib/avr/include/
+
+6-  which avr-gcc
+
+/usr/bin/avr-gcc
+
+7- utilizo el comando y lo guardo en un .asm 
+avr-objdump -d led-test > led-test.asm
+
+b- avr-size -C --mcu=atmega328p led-test
+
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     306 bytes (0.9% Full)
+(.text + .data + .bootloader)
+
+Data:          6 bytes (0.3% Full)
+(.data + .bss + .noinit)
+
+8- NO, lo primero que se ejecuta es 
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+
+Llamada a la funcion main en 00000074 <__do_copy_data>:
+  8a:	0e 94 89 00 	call	0x112	; 0x112 <main>
+
+Direccion en la que comienza el main: 
+00000112 <main>:
+ 112:	0e 94 71 00 	call	0xe2	; 0xe2 <led_init>
+
+Que hay antes del main:
+vectores de interrupcion
+<__ctors_end>: fin de codigo de inicializacion
+<__do_copy_data>:
+esperar
+led_init
+led_on
+led_off
