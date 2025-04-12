@@ -17,6 +17,8 @@ En este laboratorio trabajaremos MUCHAS cosas nuevas.
 
 Entrega
 -------
+     En nombre.apellido/lab2/ deberían quedar los siguientes proyectos:
+
 	delay_ms/
 	contador_binario/
 	ultrasound/
