@@ -1,11 +1,31 @@
 Programación de Sistemas Embebidos
 
-Entrada y Salidas Digitales
----------------------------
+LAB 2: entradas y salidas digitales
+===================================
 
-El laboratorio 2 está compuesto de tres proyectos:
+En este laboratorio trabajaremos MUCHAS cosas nuevas. 
 
-delay_ms/
+ - Utilizaremos el osciloscopio para calibrar el tiempo en que sucede "algo".
+ - Controlaremos un pulsador y veremos la importancia del pull-up o pull-down.
+ - Utilizaremos la función de biblioteca _delay_us(n) provista por avr-libc
+	(que puede hacer una espera precisa de tiempo en microsegundos).
+ - Utilizaremos en nuestras PCs o laptops el programa cutecom (o minicom)
+   para comunicarnos de manera serial con el atmega328p.
+ - Realizaremos entrada digital a través de un pulsador.
+ - Implementaremos la generación de sonido (mas ruido que sonido :) a traves 
+   del control de señales digitales en distintas frecuencias.
+
+Entrega
+-------
+	delay_ms/
+	contador_binario/
+	ultrasound/
+	ej4. respuestas sobre generación de sonido
+	sound/
+	melody/
+	theremin/
+
+Ejercicio 1.  delay_ms/
 	Escriba una función en C que implemente:
 	void delay_ms(int n); 
 	La función hace una espera de n milisegundos. 
@@ -13,15 +33,16 @@ delay_ms/
 	osciloscopio del laboratorio.
 
 	Tome notas del uso del osciloscopio y de cómo se calibra la función.
+	Utilice esta función en su programa de parpadeo de led o similar.
 
 
 ENTRADA/SALIDA digital
-======================
+----------------------
 
-contador_binario/	(entrada digital - pulsador)
+Ejercicio 2.  contador_binario/	(entrada digital - pulsador)
 	Implementación del Control de pulsador. Configuración de pullpup. 
 
-	Implementar con los leds un contadora binario de 5 bits.
+	Implementar con los leds un contadora binario de 4 bits.
 	Simplemente se debe contar dejando un delay de unos 300ms
 	entre valor y valor.
 
@@ -29,7 +50,7 @@ contador_binario/	(entrada digital - pulsador)
 	se detiene el conteo.
 	Si se presiona nuevamente el pulsador entonces continua el conteo.
 
-ultrasonido/ 
+Ejercicio 3. ultrasound/ 
 
 	Desarrollar el control de un sensor digital de ultrasonido HC-SR04
 	utilizando la informacion de referencia de la pagina web
@@ -40,48 +61,75 @@ ultrasonido/
         enviar por el serial del arduino (a nuestra notebook) información
         en texto plano (asciis). El código esqueleto tiene un ejemplo.
 
+	En el código esqueleto se presenta el uso de _delay_us(n);
+	necesaria para poder ir "contando" microsegundos sucedidos.
+
 	Este programa debe reportar a su notebook la distancia del 
 	objeto detectado en cm. En el código esqueleto existe una
         biblioteca para utilizar el serial y enviar información,
         con un ejemplo.
 
-	Utilice cutecom (o similar) para ver por pantalla la distancia reportada
-	por el sistema.
+	cutecom
+	-------
+	Utilice cutecom (o similar) para ver por pantalla la distancia 
+	reportada por el sistema.
+
+	Configuracion de cutecom: 9600bpps, 8N1, sin control de flujo
+	ni por software ni por hardware.
+
+	ATENCION: cuando el cutecom tiene "abierto" el puerto serial de Linux
+	no es posible "flashear" el atmega328p (porque el puerto está en uso
+	por el cutecom). Debe "cerrar" el puerto serial en cutecom (o salir de
+	cutecom) para poder realizar "make flash":
 
 
 Generacion de SONIDO
-====================
+--------------------
 
-Teniendo en cuenta lo siguiente: 
+Ejercicio 4. 
+  Teniendo en cuenta lo siguiente: 
 
-- Una señal digital de salida, controlada por el atmega328p, tiene un 
-  valor alto o bajo, de acuerdo a la programación del GPIO. 
+  - Una señal digital de salida, controlada por el atmega328p, tiene un 
+    valor alto o bajo, de acuerdo a la programación del GPIO. 
 
-- Un ciclo de una señal digital es una señal que está en alto y 
-  luego en bajo (o viceversa),
-  y el tiempo del ciclo es el intervalo de tiempo que dura el ciclo,
+  - Un ciclo de una señal digital es una señal que está en alto y 
+    luego en bajo (o viceversa),
+    y el tiempo del ciclo es el intervalo de tiempo que dura el ciclo,
 
-Averigue y responda de manera sencilla (por ej. en un párrafo) las siguientes 
-preguntas:
+  Averigue y responda de manera sencilla (por ej. en un párrafo) las siguientes 
+  preguntas:
 
-a. ¿Cómo podría generar una señal de salida de 500hz?
+  a. ¿Cómo podría generar una señal de salida de 500hz?
 
-b. ¿Cómo se origina el sonido?
+  b. ¿Cómo se origina el sonido?
 
-c. ¿Hay alguna relación entre la frecuencia de vibración de un objeto
-y la frecuencia del sonido que genera? (si es que genera sonido)
+  c. ¿Hay alguna relación entre la frecuencia de vibración de un objeto
+  y la frecuencia del sonido que genera? (si es que genera sonido)
 
-d. ¿En qué frecuencias están las ondas de sonido que puede percibir un 
-ser humano?
+  d. ¿En qué frecuencias están las ondas de sonido que puede percibir un 
+  ser humano?
 
-e. ¿Qué es un piezo speaker? (dé una explicación breve), y ¿cómo se controla?
+  e. ¿Qué es un piezo speaker? (dé una explicación breve), y ¿cómo se controla?
 
-f. Dado todo lo anterior, ¿podría escribir un programa embebido, para controlar
-   un piezo speaker y generar la nota DO (en alguna escala) musical?
+  f. Dado todo lo anterior, ¿podría escribir un programa embebido, para 
+     controlar un piezo speaker y generar la nota DO (en alguna escala) musical?
 
-Ejercicio EXTRA :
 
-melody/
+Ejercicio 5. sound/
+	Desarrollar una función en un programa embebido que genere un 
+	sonido a través de un piezo speaker. La API es la siguiente:
+
+	sound(int frec, int duracion);
+
+	Genera un sonido (o señal) con frecuencia 'frec' y durante 
+	'duracion' milisegundos.
+
+	Utilice _delay_us(n); de avr-libc como se observa en ultrasound.c 
+
+
+Ejercicios EXTRAS (hacer en grupo de 2 personas) :
+
+Ejercicio 6. melody/
 	Controlar un piezo speaker utilizando un pin digital.
 	Buscar la frecuencias de las notas musicales para una octava.
 
@@ -106,17 +154,7 @@ melody/
 	Desarrollar un reproductor elegante para la melodia.
 	
 	
-sound/
-	Desarrollar una función en un programa embebido que genere un 
-	sonido a través de un piezo speaker. La API es la siguiente:
-
-	sound(int frec, int duracion);
-
-	Genera un sonido (o señal) con frecuencia 'frec' y durante 
-	'duracion' milisegundos.
-
-
-theremin/
+Ejercicio 7. theremin/
 	Desarrollar un sistema embebido que genere sonidos a diferentes
 	frecuencias utilizando el ultrasonido y el piezo speaker.
 	EL usuario debería poder controlar la frecuencia del sonido 
