@@ -1,0 +1,131 @@
+Programación de Sistemas Embebidos
+
+Entrada y Salidas Digitales
+---------------------------
+
+El laboratorio 2 está compuesto de tres proyectos:
+
+delay_ms/
+	Escriba una función en C que implemente:
+	void delay_ms(int n); 
+	La función hace una espera de n milisegundos. 
+	Para calibrar el tiempo de espera de la función utilice el 
+	osciloscopio del laboratorio.
+
+	Tome notas del uso del osciloscopio y de cómo se calibra la función.
+
+
+ENTRADA/SALIDA digital
+======================
+
+contador_binario/	(entrada digital - pulsador)
+	Implementación del Control de pulsador. Configuración de pullpup. 
+
+	Implementar con los leds un contadora binario de 5 bits.
+	Simplemente se debe contar dejando un delay de unos 300ms
+	entre valor y valor.
+
+	Si se presiona el pulsador (conectado a un pin del puerto C)
+	se detiene el conteo.
+	Si se presiona nuevamente el pulsador entonces continua el conteo.
+
+ultrasonido/ 
+
+	Desarrollar el control de un sensor digital de ultrasonido HC-SR04
+	utilizando la informacion de referencia de la pagina web
+        (especificamente pagina 6 :)
+
+	En la carpeta ultrasound/ se encuentra el código esqueleto
+        para este trabajo. Viene con una biblioteca serial para poder
+        enviar por el serial del arduino (a nuestra notebook) información
+        en texto plano (asciis). El código esqueleto tiene un ejemplo.
+
+	Este programa debe reportar a su notebook la distancia del 
+	objeto detectado en cm. En el código esqueleto existe una
+        biblioteca para utilizar el serial y enviar información,
+        con un ejemplo.
+
+	Utilice cutecom (o similar) para ver por pantalla la distancia reportada
+	por el sistema.
+
+
+Generacion de SONIDO
+====================
+
+Teniendo en cuenta lo siguiente: 
+
+- Una señal digital de salida, controlada por el atmega328p, tiene un 
+  valor alto o bajo, de acuerdo a la programación del GPIO. 
+
+- Un ciclo de una señal digital es una señal que está en alto y 
+  luego en bajo (o viceversa),
+  y el tiempo del ciclo es el intervalo de tiempo que dura el ciclo,
+
+Averigue y responda de manera sencilla (por ej. en un párrafo) las siguientes 
+preguntas:
+
+a. ¿Cómo podría generar una señal de salida de 500hz?
+
+b. ¿Cómo se origina el sonido?
+
+c. ¿Hay alguna relación entre la frecuencia de vibración de un objeto
+y la frecuencia del sonido que genera? (si es que genera sonido)
+
+d. ¿En qué frecuencias están las ondas de sonido que puede percibir un 
+ser humano?
+
+e. ¿Qué es un piezo speaker? (dé una explicación breve), y ¿cómo se controla?
+
+f. Dado todo lo anterior, ¿podría escribir un programa embebido, para controlar
+   un piezo speaker y generar la nota DO (en alguna escala) musical?
+
+Ejercicio EXTRA :
+
+melody/
+	Controlar un piezo speaker utilizando un pin digital.
+	Buscar la frecuencias de las notas musicales para una octava.
+
+	Implementar la reproducción de una nota utilizando el control
+	de la frecuencia de períodos de una señal digital sobre un pin.
+	Utilice el _delay_us(n) y un pin del arduino para generar una
+	señal digital con la frecuencia necesaria. 
+
+	Por ejemplo, el DO en escala 7ma tiene una frecuencia de 2093hz.
+        Para lograr esa frecuencia, habría que :
+            poner_en_alto la señal
+	    esperar 248 microsegundos
+            poner_en_bajo la señal
+	    esperar 248 microsegundos
+	Eso genera un período que dura 476 microsegundos.
+	En un segundo, con períodos de esa duración, habrán sucedido
+	2093 períodos (2093hz, que se la frecuencia buscada y se 
+ 	escucharía el DO en séptima).
+
+	Buscar una melodia sencilla. Colocar las notas y duración
+	en una estructura de datos (por ej. un arreglo).
+	Desarrollar un reproductor elegante para la melodia.
+	
+	
+sound/
+	Desarrollar una función en un programa embebido que genere un 
+	sonido a través de un piezo speaker. La API es la siguiente:
+
+	sound(int frec, int duracion);
+
+	Genera un sonido (o señal) con frecuencia 'frec' y durante 
+	'duracion' milisegundos.
+
+
+theremin/
+	Desarrollar un sistema embebido que genere sonidos a diferentes
+	frecuencias utilizando el ultrasonido y el piezo speaker.
+	EL usuario debería poder controlar la frecuencia del sonido 
+	"acercando" o "alejando" la mano del ultrasonido, similar a como
+	se genera en el theremin:
+	
+	https://www.youtube.com/shorts/GgkBeLThVfs
+	(el theremin es un instrumento muy complejo que permite variar
+	 diferentes parámetros del sonido. Nosotros simplemente generaremos
+	 diferentes frecuencias, con baja resolucion, y siempre con la 
+	 misma amplitud (volumen)).
+
