@@ -1,0 +1,68 @@
+1. Las librerias usadas son: avr-gcc , avr-objcopy, avrdude
+
+
+2. La primera version fallaba por un error de programacion. No se cambiaba el bit 5 del ddrb correctamente. Luego de la correccion, funciono correctamente.
+
+
+3. El comando 'file' sobre archivo utils .elf, verifico que la arquitectura es correcta.
+"utils.elf: ELF 32-bit LSB executable, Atmel AVR 8-bit, version 1 (SYSV), statically linked, with debug_info, not stripped"
+
+
+4. Las binutils, sus metadatos se encuentran en /var/lib/pacman/local. Sus datos principales en "/usr/bin/"
+
+
+5. El comando 'avr-gcc -xc - -H -v -fsyntax-only' nos permite ver:
+=====================================================
+|#include "..." search starts here:					|
+|#include <...> search starts here:					|
+| /usr/lib/gcc/avr/14.2.0/include					|
+| /usr/lib/gcc/avr/14.2.0/include-fixed				|
+| /usr/lib/gcc/avr/14.2.0/../../../../avr/include	|
+=====================================================
+ Esto significa que los headers se buscan, y por lo tanto, se almacenan en:
+ /usr/lib/gcc/avr/14.2.0/include
+ /usr/lib/gcc/avr/14.2.0/include-fixed
+ /usr/avr/include
+ 
+
+6. avr-gcc se instalo en "/usr/bin/" y "/usr/lib/gcc/"
+
+
+7. La seccion de codigo ocupa 354 bytes y la seccion de datos 6 bytes
+text    data	bss	    dec     hex	filename
+354     6       0	    360     168	utils.elf
+
+
+8. No el main no se ejecuta primero.
+La llamada al main se encuentra en:
+=========================================================
+|0000008a <L0^A>:				                    	|
+|8a:	0e 94 a4 00 	call	0x148	; 0x148 <main>  |
+=========================================================
+El main comienza en la direccion 00000148
+
+Antes del main estan los vectores de interrupcion y carga de datos
+00000000 <__vectors>:
+   0:	0c 94 34 00 	jmp	0x68	; 0x68 <__ctors_end>
+   4:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+   8:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+   c:	0c 94 49 00 	jmp	0x92	; 0x92 <__bad_interrupt>
+[...]
+00000068 <__ctors_end>:
+  68:	11 24       	eor	r1, r1
+  6a:	1f be       	out	0x3f, r1	; 63
+  6c:	cf ef       	ldi	r28, 0xFF	; 255
+  6e:	d8 e0       	ldi	r29, 0x08	; 8
+  70:	de bf       	out	0x3e, r29	; 62
+  72:	cd bf       	out	0x3d, r28	; 61
+[...]
+00000074 <__do_copy_data>:
+  74:	11 e0       	ldi	r17, 0x01	; 1
+[...]
+00000084 <.L__do_copy_data_start>:
+  84:	a6 30       	cpi	r26, 0x06	; 6
+[...]
+0000008a <L0^A>:
+  8a:	0e 94 a4 00 	call	0x148	; 0x148 <main>
+  8e:	0c 94 af 00 	jmp	0x15e	; 0x15e <_exit>
+
