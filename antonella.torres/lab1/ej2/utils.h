@@ -9,10 +9,12 @@
 #ifndef _UTILS_H
 #define _UTILS_H
 
+extern const volatile int SIZE;  
+
 
 void esperar();
 void led_init();
-void led_on();
+void leds_on();
 void led_off();
 
 
