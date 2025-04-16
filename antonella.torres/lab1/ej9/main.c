@@ -17,13 +17,14 @@ int main(void)
     while (1) {
 		esperar();
         leds_on(i);
-
+        
         i += dir;
 
         // Si llega al final o al principio, cambia de dirección
         if (i == SIZE - 1 || i == 0) {
             dir = -dir;
         }
+            
     }
 }
 
