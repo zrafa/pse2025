@@ -1,0 +1,92 @@
+Ej 8.1
+#include <stdio.h>
+void printBinary(char num) {
+    for (int i = 7; i >= 0; i--) {
+        printf("%d", (num >> i) & 1);
+    }
+}
+
+
+
+int main() {
+    
+    char valor = (3 << 5);  // 3 desplazado 5 lugares a la izquierda
+
+    printf("Valor en base 2: ");
+    printBinary(valor);
+    printf("\n");
+
+    printf("Valor en decimal: %d\n", valor);
+
+    return 0;
+}
+
+
+Ej 8.2
+
+#include <stdio.h>
+void printBinary(char num) {
+    for (int i = 7; i >= 0; i--) {
+        printf("%d", (num >> i) & 1);
+    }
+}
+
+
+
+int main() {
+    
+    char valor =  ~(3 << 5);  // 3 desplazado 5 lugares a la izquierda
+
+    printf("Valor en base 2: ");
+    printBinary(valor);
+    printf("\n");
+
+    printf("Valor en decimal: %d\n", valor);
+
+    return 0;
+}
+
+
+EJ 8.3
+
+AND-> Pone el bit en 1 solo si ambos son 1
+OR -> Pone el bit en 1 si al menos uno es 1
+
+EJ 8.4
+
+#include <stdio.h>
+
+void convertirABinario(unsigned char n) {
+    char nro; 
+    for (int i = 7; i >= 0; i--) {
+        nro = (n >> i) & 1 ? '1' : '0'; 
+        printf("bit %d :  %c \n", i, nro);  
+    }
+}
+
+int main() {
+    unsigned char x = 11;  
+    convertirABinario(x);   
+    printf("\n");
+    return 0;
+}
+
+EJ 8.5 
+
+ if (  (x>>3) & 1  ) printf ("el bit3 de la variable registro es 1 \n");
+
+EJ 8.6
+n = n & 0xF8;
+
+EJ 8.7
+n = n | 0xC0;
+
+
+
+EJERCICIO 9
+Tamaño maximo de un unsigned char 255. Al querer realizar dicha
+operacion daria overflow. Se da una perdida de información, al 
+ejecutarlo RES tiene el valor 0 esto se da dado que se realiza
+la operación * y da 9500, dicho valor se intenta castear a 
+unsigned char(segun el chat se hace el mod con 256), eos da 180.
+Al dividirlo por 190 un nro mayor la div entera da 0.
