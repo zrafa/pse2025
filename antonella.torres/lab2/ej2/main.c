@@ -11,6 +11,7 @@
  int main(void)
  {	
      init();
+     contador_binario();
  
  }
  

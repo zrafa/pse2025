@@ -10,7 +10,7 @@
 /* puertos de E/S */
 
 /* direccion de PORTB (registro de datos) */
-volatile unsigned char * puerto_b = (unsigned char *) 0x25;
+volatile unsigned char * port_b = (unsigned char *) 0x25;
 
 /* direccion de DDR B (registro de control) */
 volatile unsigned char * ddr_b = (unsigned char *) 0x24;
@@ -26,16 +26,33 @@ void esperar(unsigned int ms) {
 }
 
 /* led_init: configura el puerto b bit 5 como salida */
-void led_init() {
-	/* COMPLETAR */
+void init() {
+		//d10 como salida
+		*ddr_b |= (2 << 1);
+		//d9 entrada
+		*ddr_b &= ~(1 << 1);
 
-		*ddr_b |= (1 << 5);
+		//PARA ACTIVAR EL PULL UP CAMBIO EL D9 A 1
+		*port_b |=(1 << 1); 
 
-}
 
-void led_on() {
-	*puerto_b |= (1 << 5);  // Pone PB5 en alto (LED encendido)
-}
-void led_off() {
-	*puerto_b &= ~(1 << 5); // Pone PB5 en bajo (LED apagado)
+		volatile unsigned char anterior = *pin_b & (1 << 1);
+		volatile unsigned char actual;
+		while (1) {
+
+			while ((*pin_b & (1 << 1)) == 1);  
+			esperar(50);
+			while ((*pin_b & (1 << 1)) ==0 );  
+			*port_b ^= (1 << 2);	
+
+
+			esperar(100);
+			esperar(100);
+	
+
+		
+		}
+
+	
+
 }

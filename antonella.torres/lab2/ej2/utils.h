@@ -12,7 +12,7 @@
  
  void esperar();
  void init();
-
+ void contador_binario();
  
  
  #endif	/* _UTILS_H */
