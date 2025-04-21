@@ -29,10 +29,10 @@ Entrega
 
 Ejercicio 1.  delay_ms/
 	Escriba una función en C que implemente:
-	void delay_ms(int n); 
-	La función hace una espera de n milisegundos. 
-	Para calibrar el tiempo de espera de la función utilice el 
-	osciloscopio del laboratorio.
+		void delay_ms(int n); 
+		La función hace una espera de n milisegundos. 
+		Para calibrar el tiempo de espera de la función utilice el 
+		osciloscopio del laboratorio.
 
 	Tome notas del uso del osciloscopio y de cómo se calibra la función.
 	Utilice esta función en su programa de parpadeo de led o similar.
@@ -53,7 +53,6 @@ Ejercicio 2.  contador_binario/	(entrada digital - pulsador)
 	Si se presiona nuevamente el pulsador entonces continua el conteo.
 
 Ejercicio 3. ultrasound/ 
-
 	Desarrollar el control de un sensor digital de ultrasonido HC-SR04
 	utilizando la informacion de referencia de la pagina web
         (especificamente pagina 6 :)
@@ -89,39 +88,41 @@ Generacion de SONIDO
 --------------------
 
 Ejercicio 4. 
-  Teniendo en cuenta lo siguiente: 
+  	Teniendo en cuenta lo siguiente: 
 
-  - Una señal digital de salida, controlada por el atmega328p, tiene un 
-    valor alto o bajo, de acuerdo a la programación del GPIO. 
+  	- Una señal digital de salida, controlada por el atmega328p, tiene un 
+    	  valor alto o bajo, de acuerdo a la programación del GPIO. 
 
-  - Un ciclo de una señal digital es una señal que está en alto y 
-    luego en bajo (o viceversa),
-    y el tiempo del ciclo es el intervalo de tiempo que dura el ciclo,
+  	- Un ciclo de una señal digital es una señal que está en alto y 
+	  luego en bajo (o viceversa),
+	  y el tiempo del ciclo es el intervalo de tiempo que dura el ciclo,
 
-  Averigue y responda de manera sencilla (por ej. en un párrafo) las siguientes 
-  preguntas:
+  	Averigue y responda de manera sencilla (por ej. en un párrafo) las 
+	siguientes preguntas:
 
-  a. ¿Cómo podría generar una señal de salida de 500hz?
+		a. ¿Cómo podría generar una señal de salida de 500hz?
 
-  b. ¿Cómo se origina el sonido?
+		b. ¿Cómo se origina el sonido?
 
-  c. ¿Hay alguna relación entre la frecuencia de vibración de un objeto
-  y la frecuencia del sonido que genera? (si es que genera sonido)
+		c. ¿Hay alguna relación entre la frecuencia de vibración de un objeto
+		   y la frecuencia del sonido que genera? (si es que genera sonido)
 
-  d. ¿En qué frecuencias están las ondas de sonido que puede percibir un 
-  ser humano?
+  		d. ¿En qué frecuencias están las ondas de sonido que puede percibir 
+		   un ser humano?
 
-  e. ¿Qué es un piezo speaker? (dé una explicación breve), y ¿cómo se controla?
+		e. ¿Qué es un piezo speaker? (dé una explicación breve), y ¿cómo se 
+		   controla?
 
-  f. Dado todo lo anterior, ¿podría escribir un programa embebido, para 
-     controlar un piezo speaker y generar la nota DO (en alguna escala) musical?
+		f. Dado todo lo anterior, ¿podría escribir un programa embebido, 
+		   para controlar un piezo speaker y generar la nota DO (en alguna 
+		   escala) musical?
 
 
 Ejercicio 5. sound/
 	Desarrollar una función en un programa embebido que genere un 
 	sonido a través de un piezo speaker. La API es la siguiente:
 
-	sound(int frec, int duracion);
+		sound(int frec, int duracion);
 
 	Genera un sonido (o señal) con frecuencia 'frec' y durante 
 	'duracion' milisegundos.
