@@ -17,7 +17,7 @@ void ultrasound_init(void)
 
 volatile int isEchoActivated()
 {
-	return (volatile int)((*PORTB & 0b00000010) == 0b00000010);
+	return ((volatile int)((*PINB & 0b00000010) == 0b00000010));
 }
 /* ultrasound_get_distance()
  * 	devuelve la distancia en cm del objeto delante del sensor
@@ -26,22 +26,26 @@ volatile int isEchoActivated()
 int ultrasound_get_distance(void)
 {
 	volatile int i = -1;
-	volatile int mSTardados = 0;
+	unsigned volatile long uSTardados = 0;
 	volatile int cm = 0;
 	bitOn(PORTB, 0b00000001);
-	_delay_us(10); /* espero 1000 microsegundos (1 milisegundo) */
+	_delay_us(12); /* espero 1000 microsegundos (1 milisegundo) */
 	bitOff(PORTB, 0b00000001);
 	/* completar con driver de ultrasonido */
-	while (!isEchoActivated)
+	while (!isEchoActivated())
+	{
+	}
+	while (isEchoActivated() && uSTardados < 36000)
 	{
 		_delay_us(1);
-		mSTardados++;
+		uSTardados++;
 	}
-	while (isEchoActivated)
+	if (uSTardados < 36000)
 	{
-		/* code */
+		i = uSTardados / 58;
 	}
-	_delay_us(10);
-	i = mSTardados / 58;
+
+	_delay_us(10000);
+
 	return i;
 }

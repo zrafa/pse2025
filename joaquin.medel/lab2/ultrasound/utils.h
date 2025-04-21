@@ -11,7 +11,7 @@
 
 #define PORTB (volatile unsigned char *)0x25
 #define DDRB (volatile unsigned char *)0x24
-#define PINB0 (volatile unsigned char *)0x23
+#define PINB (volatile unsigned char *)0x23
 
 void esperar(volatile unsigned int);
 void led_init();

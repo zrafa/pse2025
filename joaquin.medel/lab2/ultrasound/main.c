@@ -15,19 +15,21 @@ int main(void)
 
 	serial_init();
 	ultrasound_init();
-	/* Ejemplo de uso de la biblioteca serial */
-	serial_put_str("HOLA MUNDO \r\n");
 	serial_put_int(dist_cm, 4); /* Mostrar distancia */
-
+	led_init();
 	/* un programa embebido nunca finaliza */
 	for (;;)
 	{
-		serial_put_str("HOLA MUNDO \r\n");
+		led_off();
+		serial_put_str("Comienzo buscar distancia  \r\n");
 
 		dist_cm = ultrasound_get_distance();
 		serial_put_int(dist_cm, 4); /* Mostrar distancia */
 		serial_put_str("\r\n");
-
+		if (dist_cm < 10)
+		{
+			led_on();
+		}
 		_delay_ms(1000);
 	}
 }
