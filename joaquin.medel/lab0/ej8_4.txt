@@ -1,0 +1,10 @@
+8.4 Para la siguiente definición:
+
+    unsigned char x = 11;
+
+    Indique el valor binario de cada bit de la variable x
+    (bit7 bit6 bit5 bit4 bit3 bit2 bit1 bit0)
+
+    :
+
+    0000 1011

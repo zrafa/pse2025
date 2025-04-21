@@ -1,0 +1,19 @@
+3) 
+file led-test
+led-test: ELF 32-bit LSB executable, Atmel AVR 8-bit, version 1 (SYSV), statically linked, with debug_info, not stripped
+4)
+en usr/lib
+5)
+libraries: =/usr/lib/gcc/avr/7.3.0/:/usr/lib/gcc/avr/7.3.0/../../../avr/lib/avr/7.3.0/:/usr/lib/gcc/avr/7.3.0/../../../avr/lib/
+
+6)
+Seria en /usr/lib/gcc/avr/
+7)
+avr-objdump -d led-test.elf > led-test.asm
+avr-size led-test.elf
+   text    data     bss     dec     hex filename
+    390       0       0     390     186 led-test.elf
+8)
+No es lo primero que se ejecuta, se puede encontrar la llamada a la funcion main dentro de __ctors_end, comienza en la direccion 0e 94 5f 00, antes de main podemos encontrar los codigos de la funciones que hicimos,y funciones que genera avr
+
+
