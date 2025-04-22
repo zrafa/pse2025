@@ -1,0 +1,32 @@
+
+
+		a. ¿Cómo podría generar una señal de salida de 500hz?
+
+        En 1 segundo alternando 500 veces entre 5v y 0v 
+        
+        donde cada ciclo dura 0,002s 
+
+		b. ¿Cómo se origina el sonido?
+
+        Se origina de vibraciones , se transmiten por distintos medios por ejemplo el aire
+
+		c. ¿Hay alguna relación entre la frecuencia de vibración de un objeto
+		   y la frecuencia del sonido que genera? (si es que genera sonido)
+
+           Si, la cantidad de veces que vibra un objeto genera una frencuencia en base a la cantidad de veces que vibro
+
+  		d. ¿En qué frecuencias están las ondas de sonido que puede percibir 
+		   un ser humano? 
+
+           20 Hz hasta 20,000 Hz
+
+		e. ¿Qué es un piezo speaker? (dé una explicación breve), y ¿cómo se 
+		   controla?
+
+            Se controla conectado una pata a ground y otra a un registro, cuando el registro esta en 1 vibra , cuando esta en 0 no
+
+		f. Dado todo lo anterior, ¿podría escribir un programa embebido, 
+		   para controlar un piezo speaker y generar la nota DO (en alguna 
+		   escala) musical?
+
+           Sabiendo la frecuencia de DO podriamos hacer vibrar a esa frecuencia el piezo speaker 
