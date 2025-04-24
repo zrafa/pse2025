@@ -8,4 +8,5 @@
  */
 int ultrasound_get_distance(void);
 void init_ultrasound(void);
-
+void soundT(void);
+void sound(int, int);

@@ -18,6 +18,28 @@ volatile unsigned char *pin_b  = (unsigned char *) 0x23;
  * 	devuelve -1 si no existe ningun objeto
  */
 
+void soundT(){
+	//frecuencia de do= 261 hz -> 1/261=3.83ms(1 ciclo), medio ciclo 1.9ms 
+	*ddr_b |= (1 << 2); //utilizamos el pb0 como salida
+	while (1){
+		
+		*port_b ^= (1 << 2); 
+		_delay_us(1915);	
+	}
+
+	
+}
+
+void sound (int frec, int duracion){
+	*ddr_b |= (1 << 2); //utilizamos el pb0 como salida
+	float medio_ciclo_us = (1000000.0 / frec) / 2.0;  // medio ciclo en microsegundos
+    int ciclos = (duracion * 1000) / (2 * medio_ciclo_us);  // cuántos ciclos caben en ese tiempo
+
+    for(int i = 0; i < ciclos*2; i++) {
+        *port_b ^= (1 << 2);  // Alternar estado pin PB2
+        _delay_us(medio_ciclo_us);
+    }
+}
 
 
  void init_ultrasound() {

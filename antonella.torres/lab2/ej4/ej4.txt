@@ -1,0 +1,52 @@
+Ejercicio 4. 
+  	Teniendo en cuenta lo siguiente: 
+
+  	- Una señal digital de salida, controlada por el atmega328p, tiene un 
+    	  valor alto o bajo, de acuerdo a la programación del GPIO. 
+
+  	- Un ciclo de una señal digital es una señal que está en alto y 
+	  luego en bajo (o viceversa),
+	  y el tiempo del ciclo es el intervalo de tiempo que dura el ciclo,
+
+  	Averigue y responda de manera sencilla (por ej. en un párrafo) las 
+	siguientes preguntas:
+
+		a. ¿Cómo podría generar una señal de salida de 500hz?
+
+        500 hz, 500 ciclos por segundo(señal cambia entre bajo y alto 500 veces por seg). 
+        Duracion de 1 ciclo= 1/500= 2ms
+        1ms en alto, 1ms en bajo
+
+		b. ¿Cómo se origina el sonido?
+        El sonido se origina por la vibración de un objeto que hace que el aire (u otro medio) vibre también. 
+        Esas vibraciones viajan en forma de ondas y cuando llegan a nuestros oídos, nuestro cerebro las interpreta como sonido.
+
+		c. ¿Hay alguna relación entre la frecuencia de vibración de un objeto
+		   y la frecuencia del sonido que genera? (si es que genera sonido)
+        La frecuencia de vibración de un objeto determina la frecuencia del sonido que produce.
+
+  		d. ¿En qué frecuencias están las ondas de sonido que puede percibir 
+		   un ser humano?
+        El oído humano puede percibir sonidos entre aproximadamente 20 Hz y 20.000 Hz (20 kHz).
+
+		e. ¿Qué es un piezo speaker? (dé una explicación breve), y ¿cómo se 
+		   controla?
+        Un piezo speaker es un pequeño dispositivo que convierte señales eléctricas en vibraciones (sonido), usando un cristal piezoeléctrico. 
+        Se controla aplicando una señal eléctrica alternante (una onda cuadrada, por ejemplo) en un pin digital del microcontrolador.
+
+		f. Dado todo lo anterior, ¿podría escribir un programa embebido, 
+		   para controlar un piezo speaker y generar la nota DO (en alguna 
+		   escala) musical?
+        NOTA DO Frecuencia -> 261.63 Hz
+		void soundT(){
+			//frecuencia de do= 261 hz -> 1/261=3.83ms(1 ciclo), medio ciclo 1.9ms 
+			*ddr_b |= (1 << 2); //utilizamos el pb0 como salida
+			while (1){
+				
+				*port_b ^= (1 << 2); 
+				_delay_us(1915);	
+			}
+
+			
+		}
+

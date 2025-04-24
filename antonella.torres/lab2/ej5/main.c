@@ -3,7 +3,7 @@
  */
 
 #include "serial.h"
-#include "ultrasound.h"
+#include "makesound.h"
 
 #define __DELAY_BACKWARD_COMPATIBLE__
 #define F_CPU   16000000UL
