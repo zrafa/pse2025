@@ -35,6 +35,10 @@ void sound (int frec, int duracion){
 	float medio_ciclo_us = (1000000.0 / frec) / 2.0;  // medio ciclo en microsegundos
     int ciclos = (duracion * 1000) / (2 * medio_ciclo_us);  // cuántos ciclos caben en ese tiempo
 
+	if (frec==0) {
+		_delay_us(duracion*1000);
+	}
+
     for(int i = 0; i < ciclos*2; i++) {
         *port_b ^= (1 << 2);  // Alternar estado pin PB2
         _delay_us(medio_ciclo_us);
