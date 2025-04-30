@@ -90,5 +90,6 @@
 // Silencio
 #define REST 0 // 0Hz (sin sonido)
 void sound(volatile int frecuency, volatile int duration);
+void sound2(volatile int frecuencia, volatile char c);
 void sound_init();
 #endif /* _UTILS_H */

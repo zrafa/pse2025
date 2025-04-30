@@ -6,7 +6,7 @@
 
 #include "serial.h"
 #include "speaker_driver.h"
-#define ms 10000
+#define ms 100
 int main(void)
 {
     char rcvChar = 0;
@@ -26,6 +26,22 @@ int main(void)
     {
 
         rcvChar = serial_get_char();
+        /*if (rcvChar == 'a')
+            sound2(DO6, 'a');
+        if (rcvChar == 's')
+            sound2(RE6, 's');
+        if (rcvChar == 'd')
+            sound2(MI6, 'd');
+        if (rcvChar == 'f')
+            sound2(FA6, 'f');
+        if (rcvChar == 'g')
+            sound2(SOL6, 'g');
+        if (rcvChar == 'h')
+            sound2(LA6, 'h');
+        if (rcvChar == 'j')
+            sound2(SI6, 'j');
+        if (rcvChar == 'k')
+            sound2(DO7, 'k');*/
 
         if (rcvChar == 'a')
             sound(DO6, ms);
