@@ -1,0 +1,4 @@
+(2.a) Lea y comprenda utilizando la hoja de datos la ubicación de los registros (pagina 612 del manual
+del atmega328p)
+
+3. Para enviar letras se debe entrar al minicom, luego ctrl+A luego E. Y ahi escribe
