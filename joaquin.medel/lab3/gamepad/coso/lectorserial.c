@@ -3,7 +3,11 @@
 #include <termios.h>
 #include <unistd.h>
 #include <stdlib.h> // ← necesario para system()
-
+#define charR Right
+#define charL Left
+#define STR(s) #s
+#define XDOTOOL_KEYDOWN(key) "xdotool keydown " STR(key)
+#define XDOTOOL_KEYUP(key) "xdotool keyup " STR(key)
 int main()
 {
     const char *portname = "/dev/ttyUSB0";
@@ -66,14 +70,14 @@ int main()
         {
             printf("Presiono R\n");
             fflush(stdout);
-            system("xdotool keydown e");
+            system(XDOTOOL_KEYDOWN(charR));
             Rpressed = 1;
         }
         else if (Rpressed && !buttonR)
         {
             printf("Dejo de presionar R\n");
             fflush(stdout);
-            system("xdotool keyup e");
+            system(XDOTOOL_KEYUP(charL));
             Rpressed = 0;
         }
 
@@ -81,14 +85,14 @@ int main()
         {
             printf("Presiono L\n");
             fflush(stdout);
-            system("xdotool keydown q");
+            system(XDOTOOL_KEYDOWN(charL));
             Lpressed = 1;
         }
         else if (Lpressed && !buttonL)
         {
             printf("Dejo de presionar L\n");
             fflush(stdout);
-            system("xdotool keyup q");
+            system(XDOTOOL_KEYUP(charL));
             Lpressed = 0;
         }
     }
