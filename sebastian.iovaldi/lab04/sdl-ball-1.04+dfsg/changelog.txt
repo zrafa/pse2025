@@ -1,0 +1,711 @@
+commit a08ef03281bc3410cb63b6b860242407d97c6703
+Author: DusteD <dusted@dusted.dk>
+Date:   Thu Apr 9 22:40:58 2020 +0200
+
+    Fix readme and build for release 1.04
+
+commit b546d08fe0e96f5dac747e0da7071cea6e7e547e
+Author: DusteD <dusted@dusted.dk>
+Date:   Tue Apr 7 12:34:58 2020 +0200
+
+    Version 1.03
+
+commit b5194a16f5465281669a847af5b047e58054cf19
+Author: DusteD <dusted@dusted.dk>
+Date:   Tue Apr 7 12:25:32 2020 +0200
+
+    Fix last 2 compiler warnings.
+
+commit c487b4d93e01aaa0b6f57821c7c3cbb93dc8e840
+Author: Dmitry Marakasov <amdmi3@amdmi3.ru>
+Date:   Mon Dec 1 00:34:33 2014 +0300
+
+    Fix Makefile
+    
+    - Compile with CXX, as this is c++ code
+    - Don't override user-set CXX
+    - Place DATADIR define to CXXFLAGS where it belongs
+
+commit db436e01739cf0d8e882baeb1058dbed716fffa1
+Author: Dmitry Marakasov <amdmi3@amdmi3.ru>
+Date:   Mon Dec 1 00:42:38 2014 +0300
+
+    Fix clang warnings
+
+commit 9479653127e00dc756610e423fd241aaee26796b
+Author: DusteD <dusted@dusted.dk>
+Date:   Mon Apr 6 13:10:49 2020 +0200
+
+    Apply patch #4 from sf.net, should fix mouse acting up on some systems.
+    
+    Also, fixed a few brackets, this game was my first real computer program and it really shows. :)
+
+commit a51644c5f7e7686cb7ad46682e3d2c77f37cfeb1
+Author: DusteD <dusted@dusted.dk>
+Date:   Mon Apr 6 12:57:44 2020 +0200
+
+    Convert all files to unix line-endings.
+
+commit 93dac74720ac729822a5bdf05adab09919b98b11
+Author: DusteD <dusted@dusted.dk>
+Date:   Mon Apr 6 12:56:43 2020 +0200
+
+    Patch #7 from sf.net , don't move paddle on pause/resume
+
+commit d6de2153c160fd79458f7df970fed8d5890a8b4d
+Author: Jimmy Christensen <dusted@dusted.dk>
+Date:   Thu Aug 25 18:21:38 2016 +0200
+
+    Added contigrator build script.
+
+commit 2126cea41a01306c5a5e5e0f07ab4371a7548def
+Author: Jimmy Christensen <dusted@dusted.dk>
+Date:   Thu Aug 25 18:08:51 2016 +0200
+
+    Automatic builds, makefile for windows
+
+commit 1a01ceef1d664f993fbc49e09c874fef97faad2d
+Author: Jimmy Christensen <dusted@dusted.dk>
+Date:   Wed Aug 24 17:23:47 2016 +0200
+
+    Add a Linux app store metadata file
+
+commit 52d8a5266919342acdcc8cfe134c52320394165d
+Author: Jimmy Christensen <dusted@dusted.dk>
+Date:   Fri Nov 7 18:23:08 2014 +0200
+
+    Add GenericName to .desktop file.
+    
+    Thanks to nemysisbsd for the patc for the patch.
+
+commit 335fedcc9c003c95a51a905b522fb4630271ac86
+Author: Jimmy Christensen <dusted@dusted.dk>
+Date:   Wed Oct 8 18:42:41 2014 +0300
+
+    Version 1.02
+    
+    Fixed minor things, changed default settings.
+
+commit 9f19a0e5382d936fc74f37bf206556a07f3a5974
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Jan 5 08:05:21 2010 +0000
+
+    compile icon into binary
+
+commit a8540633d62fda6061620a6e879f9fadf3fc3648
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Jan 5 08:03:21 2010 +0000
+
+    cb project file updated
+
+commit 1449e12e46a07a7a2a82ffa6bea9a8ab80316295
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Jan 5 07:43:51 2010 +0000
+
+    updating sdl-win32, fixing mingw compilation warnings
+
+commit 46e2c96a37455c15704a3aa01b2cd3f4dfc70155
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Jan 11 16:12:21 2009 +0000
+
+    win32
+
+commit c8ba9dd8f886c3cb6570ec70ce42728ef07c9144
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Jan 11 16:10:15 2009 +0000
+
+commit aa62143583361d7736ac985e8ba1e5c927f2bc47
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Jan 11 16:09:33 2009 +0000
+
+    minor bugfixes
+
+commit ba172bbc7ff36c557728eef524ef0d1b27aadb69
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Thu Jan 8 09:54:26 2009 +0000
+
+commit b79196bb27fa1d6eb7f2ab7b7bf27b0ecbaaa4e5
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Thu Jan 8 09:50:46 2009 +0000
+
+    failed
+
+commit fffb9190973919d16ca0a54f752578231df07c36
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Thu Jan 8 09:48:54 2009 +0000
+
+commit 5c25d9386f75de527283db0e39c66645ba3bebfb
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Thu Jan 8 09:44:07 2009 +0000
+
+    minor
+
+commit 16f27f1631e1d54bbfd8f718eda63aad09ae8e80
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Thu Jan 8 09:04:02 2009 +0000
+
+    minor
+
+commit 6ffb4d7b36452a23fccbc2d78061582095fb28db
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Jan 4 10:17:21 2009 +0000
+
+    minor
+
+commit a5d95b03aff8de90a45810a5c5b68386cb7f022c
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Jan 2 16:40:17 2009 +0000
+
+commit 9e0e95da8977ec1d937b482e3dc16955d48d5c34
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Dec 31 00:49:22 2008 +0000
+
+    minor
+
+commit 29285b663d013e936779dc8944d0c3a65de05e55
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Dec 29 23:03:39 2008 +0000
+
+    minor, fixed pause bug
+
+commit 3546c35c2d2dd116ee22103ebfc02abd8315d4eb
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Dec 17 00:11:32 2008 +0000
+
+    minor
+
+commit b1476256d5832901a035cdec7e55b7feff24fd25
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Dec 8 21:25:57 2008 +0000
+
+    themes
+
+commit 96a97c848687cee313272b94c5a2d42470115537
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Dec 8 21:20:11 2008 +0000
+
+    dio-sound-theme
+
+commit 8833ab4b6dacf7f979624695c00be3d5a36c82eb
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Dec 8 04:45:47 2008 +0000
+
+commit b0acc09261c52b245390775df7d1f12dd98e4117
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 25 15:37:35 2008 +0000
+
+    minor
+
+commit 32ed61b4dce31a9a9f546d11e4d9ffe2176a1a7a
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Nov 23 21:47:13 2008 +0000
+
+    win32 binary
+
+commit f925fbfc42e54d6c8fdb531a0f6ba9743deb6f8c
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Nov 19 19:54:21 2008 +0000
+
+    0.14
+
+commit 68b347ca7252e0a020839b33f8fc0da1af6f31ed
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Nov 19 17:32:04 2008 +0000
+
+    minor
+
+commit 2d112eefc7bc8ab3df95244bbe1e96d67857a02f
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Nov 15 14:51:16 2008 +0000
+
+    minor
+
+commit aea9f25e387b692889fb6421978e8dcc5a159427
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Nov 14 13:46:03 2008 +0000
+
+    fixed crashbug
+
+commit 63e119a17d120a60739ef4602f656d8c659067c3
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Nov 12 16:05:46 2008 +0000
+
+    logo now POT
+
+commit 49ee3b44d3a764f53e759b90f4d4908ce1dacb7f
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Nov 12 15:42:53 2008 +0000
+
+    lol, compiler warning fixed
+
+commit f385aeac9589acc1fd3c8848882cac6015e7d2ec
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Nov 12 10:16:06 2008 +0000
+
+    minor
+
+commit fafac83b70d476c93df676bfddaf114ba16623a5
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 11 22:08:11 2008 +0000
+
+    backgrounds
+
+commit 6e98ae4f3481083befe4d39352509eaa37e06575
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 11 21:18:35 2008 +0000
+
+commit 87150585e288c9fecdcc1884c019275df7495cb9
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 11 14:37:19 2008 +0000
+
+commit 8aa6a6e37e98e923834364ea90c1cb35925b8e55
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 11 10:26:35 2008 +0000
+
+commit 8dd28cefe12f92c235ab24a77682b0299bde861d
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 11 09:29:00 2008 +0000
+
+    GPLv3 sounds
+
+commit 1d53ec8e2703463e475d17a1e75c78154e3dd257
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 11 09:23:28 2008 +0000
+
+commit 13873a1b599d59d24bb57e9414a4de663947584e
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 11 02:42:52 2008 +0000
+
+    minor, collision detection fix
+
+commit bcdcb970acc35ef1a9dc4d2ccd6d4829e047ff47
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Nov 9 16:11:37 2008 +0000
+
+    minor
+
+commit 3d8c2e01b60b46b6a46b84d83f0be2e78828147b
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Nov 9 14:13:09 2008 +0000
+
+    minor
+
+commit 7462d21a225a486fcb4aad4190d549aa5542fed8
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Nov 8 17:06:17 2008 +0000
+
+commit d09bd0261c3d3a09868e59127e3820dc87d95cfc
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Nov 8 05:23:18 2008 +0000
+
+    icons, moved xcf files
+
+commit c71f0a329cede3146db2c605a4979830f111719e
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Nov 7 23:27:43 2008 +0000
+
+commit b144991f99a70b16ceb131c329659292577364e0
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Thu Nov 6 01:54:02 2008 +0000
+
+    minor
+
+commit 58e5fd2d8b409decea7110bbb2975aa2e312859f
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Nov 5 03:19:16 2008 +0000
+
+    minor
+
+commit 47bd1dff6628cf36c66e4c7a0b5d621a9acd23f0
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Nov 5 03:02:28 2008 +0000
+
+    minor
+
+commit cb6d0a0ab200aa6d43c54dc34a8f2967b0f32bc8
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Nov 5 02:53:54 2008 +0000
+
+    minor
+
+commit 5e0cdd65cf5435f50c56c748a828a78eb812a6f5
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Nov 5 01:36:02 2008 +0000
+
+    debug
+
+commit 0c6d433cdddab45ffee622cc4869e438f28fae1c
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Nov 5 01:20:42 2008 +0000
+
+    debugging
+
+commit 5498911a998e24c92c892686a04ed42b350b4d24
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 4 17:06:49 2008 +0000
+
+    changelog lol
+
+commit d6bdc7c7d818956cac30073a956e0215fa7ec042
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 4 17:05:52 2008 +0000
+
+    minor
+
+commit 876a82d359a568f4c0c0bad179b38bd93c655337
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 4 16:52:56 2008 +0000
+
+    themes
+
+commit 44134006aa98b0d75bbd812b1eb3b1f344192fc8
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 4 16:45:46 2008 +0000
+
+    themes
+
+commit 4963fee44e30519b09d390ef00291e042b6ddf02
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 4 16:42:27 2008 +0000
+
+    themes
+
+commit 8d0947e7f582dece0315ce078da2824f0e6b8ff3
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 4 16:35:12 2008 +0000
+
+commit 2c2aea403d11cd7d911c4203ef49e12328af9a1e
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Nov 4 14:10:29 2008 +0000
+
+    minor
+
+commit 090c39bceaeb9cc104a22829475bb550204d659c
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Nov 3 22:23:01 2008 +0000
+
+    minor
+
+commit ea823372d08280e4c536050f842394542409feda
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Nov 3 21:32:58 2008 +0000
+
+    coin powerup, minor
+
+commit edc6d76208e082c4972873b1ae98aa8cafccb2ac
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Nov 2 20:19:46 2008 +0000
+
+    font rendering
+
+commit bf3ec726919c020971a7fb15b9abdcf3be76726f
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Oct 31 08:04:59 2008 +0000
+
+commit faf30fdc52252f8109b9079218db5a3d75ab1bc4
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Thu Oct 30 15:41:10 2008 +0000
+
+    minor
+
+commit ca0486fa4ce155a5c97025c7b8fa7917af8321ea
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Oct 28 07:19:29 2008 +0000
+
+commit 8f6b8c9f9ca41f0d11cbe49c1b9dc846b681302b
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Oct 26 13:44:26 2008 +0000
+
+    minor
+
+commit c7d2df98eb62727e0c2d5c90d46a6dfbab744e83
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Oct 26 11:30:21 2008 +0000
+
+    minor
+
+commit b8d0f08c545458596a7133ebe4df06a4695c34de
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Oct 26 03:30:26 2008 +0000
+
+    win32 bin
+
+commit 51d6760983694ac8f3b39c3edd1a0ed3d0188261
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 25 14:26:14 2008 +0000
+
+    bin update
+
+commit feb5f3dc760f6010b535ff04dca5cbd7a3eb6970
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 25 14:25:57 2008 +0000
+
+    stupid
+
+commit f4799d06c286b72cb1591498b5ad04543404a5f2
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 25 03:59:48 2008 +0000
+
+    win32 bin
+
+commit 077741778703db01b6ac7d148e504aa97b9bd875
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Oct 24 11:50:15 2008 +0000
+
+    0.12rc3
+
+commit 002dd564e1f7cbd41522f11af9afee701f0a2bdd
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Oct 24 11:48:02 2008 +0000
+
+    0.12rc3
+
+commit b9851c6e344abe39039318eda2f2ada3a7a630c5
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Oct 21 15:08:14 2008 +0000
+
+    minor
+
+commit a87be5ca3507f4e89cc0ecdd62c906059f3adab9
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Oct 19 15:55:58 2008 +0000
+
+commit 6a4d1f316b4c033d8f1ea841004664a65c27772c
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Oct 19 15:10:35 2008 +0000
+
+    joystick
+
+commit e488185bb561c9c4c968c235d2975bbcf1116108
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Oct 19 14:45:32 2008 +0000
+
+commit 85e70104afece4b70ea6845d738053b6092f4aa5
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Oct 19 14:21:47 2008 +0000
+
+    fonts
+
+commit fd4216092ce11bec41a719605feab846bdd0af53
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sun Oct 19 13:50:50 2008 +0000
+
+    nonfree
+
+commit 68c866657130fb45f5cf27178ca20686ba90eb6a
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 22:40:34 2008 +0000
+
+commit 8daa19c9cb641c18de42601dc1d157e019f22553
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 21:40:37 2008 +0000
+
+    squared
+
+commit 5cb038aa04ca53f2e5175005269f48c2e82435fa
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 21:12:49 2008 +0000
+
+     minor
+
+commit d4e7afe8ba4c8fcadd56329e12036806456075bf
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 20:57:50 2008 +0000
+
+    zlib
+
+commit 16d88d881f2c2bad061e8b4eaa19139858708167
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 20:51:30 2008 +0000
+
+    fix
+
+commit 684495697c18c076ae9333209eb76cc5344763de
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 20:48:14 2008 +0000
+
+    fix
+
+commit 925c39eff13c4ff840c8fe82d19306faf5a5ab60
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 20:12:25 2008 +0000
+
+    fixfix
+
+commit 975d9c6314b423e8843c045fa21c1777071ea3d7
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 19:37:40 2008 +0000
+
+    readme
+
+commit 4e8d47ee71d9154a0a43ee90fdd96486fa824342
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 19:26:04 2008 +0000
+
+    win32 update
+
+commit 35c3629aba1cdf60566fefa611ec4e7078286d99
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 15:07:17 2008 +0000
+
+    minor
+
+commit f466c1e6392cb8b6f39c36479377e5d506efa68e
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 14:21:19 2008 +0000
+
+commit 9297afcbb0231ca1ff142c95f3c15462985e438c
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 14:20:00 2008 +0000
+
+commit f11693dd91b495535f377f85405e705a1c152ba2
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 13:54:46 2008 +0000
+
+    minor
+
+commit d66068e53aead883c93f51fcb80e0576c602beb9
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Sat Oct 18 11:10:09 2008 +0000
+
+commit 6cc88d12ce41be6ffa19ecd6a8fd1edc5c43a58c
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Oct 17 23:26:00 2008 +0000
+
+    textures, themes
+
+commit 7889cd4ae8be2713023cd4ef87909b7799087a31
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Oct 17 19:37:02 2008 +0000
+
+    fix
+
+commit 9b1c7189b043e37c53375eca99e81eeb3e121b2f
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Oct 17 19:22:22 2008 +0000
+
+    fix
+
+commit 6c33c098d0265e32919116fcb68bf54b4ef788ae
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Oct 17 19:20:53 2008 +0000
+
+    stuff
+
+commit ca1b40da76afd6e940cc8a6a576023b047a9e40f
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Oct 17 10:43:18 2008 +0000
+
+    intro ran very slow on some computers
+
+commit a1c16b110d9287fc97aeabb1251a99b0d2a9f8a3
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Oct 17 00:40:36 2008 +0000
+
+    fix
+
+commit 3bd3a6ad89eba674c2d5d3b2c4b43f79dd13a293
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Oct 17 00:36:22 2008 +0000
+
+    themes folder
+
+commit 15daff399f1dd10b4bf1d83c27f437732bb12c06
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Fri Oct 17 00:34:43 2008 +0000
+
+    themes
+
+commit a8bf7b4383fe12f5ef92baddedd832b7857b51f9
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Thu Oct 16 21:54:54 2008 +0000
+
+    sound
+
+commit 164cadbd90f8220dfc7f7fd6720d25d98a54e30a
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Thu Oct 16 21:45:15 2008 +0000
+
+    coin system
+
+commit e592a3e13265341782dc7455bee5c58d20bee292
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Thu Oct 16 14:28:36 2008 +0000
+
+    Title
+
+commit 62556afc27b59c90b9779ee1cbd0d0959b706489
+Author: qreeves <qreeves@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Oct 15 22:03:43 2008 +0000
+
+    win32 update
+
+commit fcd045ba53410f5829fb179a8ef2ecef3fc2c7f1
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Oct 15 19:55:54 2008 +0000
+
+    updated makefile
+
+commit a8805e3543f5729957e275ed82796da60fc6812f
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Oct 15 19:52:51 2008 +0000
+
+commit 37fb8770f7bd3c2594dd9dc243f9fd546568f2df
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Oct 15 19:27:15 2008 +0000
+
+    intro
+
+commit 5709194f176a41bc1457f710d8951e0c0c450988
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Oct 15 01:54:46 2008 +0000
+
+    title
+
+commit c427d67758b52a8de98ea12f0321a8673bd1b398
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Wed Oct 15 01:54:17 2008 +0000
+
+    ugley implementation of title screen
+
+commit c1cfc5224f3745dd0ee3f91f7c5e161bc3b6cb97
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Oct 14 18:44:39 2008 +0000
+
+commit 07856f056693a0fac2ad34ea73f1da221ed14463
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Tue Oct 14 15:52:13 2008 +0000
+
+    bugfix and gpl header
+
+commit 6ebb04d9490e30d3e9ef3aa63526fe93231bb326
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Oct 13 19:34:23 2008 +0000
+
+    improve screenshot
+
+commit 9670f5cace5f2e7996dfd1d3dab7667303471fa1
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Oct 13 18:54:42 2008 +0000
+
+    Screenshot function
+
+commit 3ffaa4eded37d13d84868803ae4cd3cca1ed1130
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Oct 13 17:50:44 2008 +0000
+
+commit 520dfeff5998630197154485a723e554d5575f67
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Oct 13 12:57:42 2008 +0000
+
+    minor
+
+commit 05455d500380ee8204dcc71535609f947121d9b7
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Oct 13 09:46:17 2008 +0000
+
+    cleaning
+
+commit afb1d39fcb1485100a1820e6e5ca030cd26118f6
+Author: dusteddk <dusteddk@ba954290-d32f-406b-b522-cbd60828395b>
+Date:   Mon Oct 13 09:42:07 2008 +0000
