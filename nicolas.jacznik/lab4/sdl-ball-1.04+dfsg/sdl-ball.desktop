@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=SDL-Ball
+GenericName=Breakout/BrickBreaker
+Exec=sdl-ball
+Icon=sdl-ball
+Type=Application
+Comment=A DX-Ball/MegaBall/Breakout clone
+Categories=Game;ActionGame;ArcadeGame;
+Keywords=DX-Ball;MegaBall;Breakout;Arkanoid;Arcade;Puzzle;
