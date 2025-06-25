@@ -59,13 +59,18 @@ void serial_put_char(char c)
     /* Send the character via the serial port. */
     /* (escribir el dato al registro de datos de E/S */
 }
-
+void serial_put_string(char * str , int length){
+    int volatile register i;
+    for (i = 0; i < length; i++)
+    {
+        serial_put_char(str[i]);
+    }
+}
 char serial_get_char(void)
 {
     /* Wait for the next character to arrive. */
     /* Completar con E/S programada similar a serial_put_char pero
        utilizando el bit correcto */
-
     while ((puerto_serial->status_control_a & 0b10000000) != 0b10000000)
         ;
     return puerto_serial->data_es;

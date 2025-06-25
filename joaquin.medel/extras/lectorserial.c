@@ -54,47 +54,15 @@ int main()
     }
 
     unsigned char byte;
-    int Rpressed = 0;
-    int Lpressed = 0;
 
     while (1)
     {
         int n = read(serial_port, &byte, 1);
         if (n <= 0)
             continue;
+        printf(" \r El byte que llego es ,%i \n",byte);
+        
 
-        int buttonR = byte & 0b00000001;
-        int buttonL = byte & 0b00000010;
-
-        if (!Rpressed && buttonR)
-        {
-            printf("Presiono R\n");
-            fflush(stdout);
-            //system(XDOTOOL_KEYDOWN(charR));
-            Rpressed = 1;
-        }
-        else if (Rpressed && !buttonR)
-        {
-            printf("Dejo de presionar R\n");
-            fflush(stdout);
-            //system(XDOTOOL_KEYUP(charL));
-            Rpressed = 0;
-        }
-
-        if (!Lpressed && buttonL)
-        {
-            printf("Presiono L\n");
-            fflush(stdout);
-            //system(XDOTOOL_KEYDOWN(charL));
-            Lpressed = 1;
-        }
-        else if (Lpressed && !buttonL)
-        {
-            printf("Dejo de presionar L\n");
-            fflush(stdout);
-            //system(XDOTOOL_KEYUP(charL));
-            Lpressed = 0;
-        }
     }
 
     close(serial_port);

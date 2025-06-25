@@ -30,7 +30,7 @@ typedef struct
 
 /* puntero a la estructura de los registros del periferico */
 uart_t *puerto_serial = (uart_t *)(0xc0);
-#define USART_BAUDRATE 9600
+#define USART_BAUDRATE 115200
 #define BAUD_PRESCALE (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
 
 void serial_init()
@@ -59,13 +59,18 @@ void serial_put_char(char c)
     /* Send the character via the serial port. */
     /* (escribir el dato al registro de datos de E/S */
 }
-
+void serial_put_string(char * str , int length){
+    int volatile register i;
+    for (i = 0; i < length; i++)
+    {
+        serial_put_char(str[i]);
+    }
+}
 char serial_get_char(void)
 {
     /* Wait for the next character to arrive. */
     /* Completar con E/S programada similar a serial_put_char pero
        utilizando el bit correcto */
-
     while ((puerto_serial->status_control_a & 0b10000000) != 0b10000000)
         ;
     return puerto_serial->data_es;

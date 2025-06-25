@@ -10,7 +10,7 @@
  **********************************************************************/
 
 #include <stdint.h> /* para los tipos de datos. Ej.: uint8_t */
-
+#define USART_BAUDRATE 9600
 /* Completar la estructura de datos para que se superponga a los registros
    del periferico de hardware del USART del atmega328, segun sugerido
    en el apunte */
@@ -30,7 +30,7 @@ typedef struct
 
 /* puntero a la estructura de los registros del periferico */
 uart_t *puerto_serial = (uart_t *)(0xc0);
-#define USART_BAUDRATE 9600
+
 #define BAUD_PRESCALE (((F_CPU / (USART_BAUDRATE * 16UL))) - 1)
 
 void serial_init()
