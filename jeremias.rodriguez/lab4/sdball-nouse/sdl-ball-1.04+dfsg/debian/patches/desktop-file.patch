@@ -1,0 +1,11 @@
+From: Evgeni Golov <evgeni@debian.org>
+Subject: add Keywords to the desktop file
+Last-Updated: 2014-11-15
+
+--- a/sdl-ball.desktop
++++ b/sdl-ball.desktop
+@@ -6,3 +6,4 @@
+ Type=Application
+ Comment=A DX-Ball/MegaBall/Breakout clone
+ Categories=Game;ActionGame;ArcadeGame;
++Keywords=DX-Ball;MegaBall;Breakout;Arkanoid;Arcade;Puzzle;

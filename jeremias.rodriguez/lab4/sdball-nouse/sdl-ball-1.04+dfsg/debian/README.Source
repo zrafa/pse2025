@@ -1,0 +1,2 @@
+Upstream releases the source as .tar.bz2, to get a .tar.gz you need to call
+bzcat sdl-ball_0.13.orig.tar.bz2 | gzip -9 > sdl-ball_0.13.orig.tar.gz
