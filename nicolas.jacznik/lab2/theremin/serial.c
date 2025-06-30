@@ -85,24 +85,4 @@ char serial_get_char(void)
 }
 
 
-void serial_put_number(int num) {
-    char buffer[6]; // Hasta 5 dígitos + null terminator
-    int i = 0;
-
-    if (num == 0) {
-        serial_put_char('0');
-        return;
-    }
-
-    while (num > 0) {
-        buffer[i++] = (num % 10) + '0';
-        num /= 10;
-    }
-
-    // Enviar los dígitos en orden correcto
-    while (i--) {
-        serial_put_char(buffer[i]);
-    }
-    serial_put_char('\n'); // Separador para que el script en PC lo lea fácil
-}
 

@@ -1,15 +1,7 @@
-/**********************************************************************
- *
- * main.c - the main program test file for the serial driver
- *
- **********************************************************************/
-
 #include "serial.h"
 #define __DELAY_BACKWARD_COMPATIBLE__
 #define F_CPU   16000000UL
 #include <util/delay.h>
-
-
 
 int main(void)
 {
@@ -41,34 +33,6 @@ int main(void)
     int alreadyPressed = 0;
     volatile unsigned int count = 0;
     while(1){
-        /*
-        //LOGICA PARA IMITAR COMPORTAMIENTO DEL TECLADO
-        if(!(*pin_b & (1 << 4))){ //leer el estado del pin
-            if(!alreadyPressed){
-                for (i=0; i<45000; i++);        // Esperar el switch bounce
-                if (!(*pin_b & (1 << 4))) {     // Confirmar que sigue presionado
-                    serial_put_char('a');
-                }
-                alreadyPressed = 1; 
-            }else{
-                if(count <= 100){
-                    _delay_us(5000);
-                    count++;
-                }else{
-                    while (!(*pin_b & (1 << 4))){
-                        serial_put_char('a');
-                        _delay_us(40000);
-                    }
-                    count=0;
-                    alreadyPressed = 0;
-                }
-            }   
-        }else{
-            count=0;
-            alreadyPressed = 0;
-        }
-        */
-
         if(!(*pin_b & (1 << 4))){ //leer el estado del pin
             for (i=0; i<45000; i++);        // Esperar el switch bounce
             if (!(*pin_b & (1 << 4))) {     // Confirmar que sigue presionado
@@ -106,3 +70,30 @@ int main(void)
     return 0;
 }
 
+        /*
+        //LOGICA PARA IMITAR COMPORTAMIENTO DEL TECLADO
+        if(!(*pin_b & (1 << 4))){ //leer el estado del pin
+            if(!alreadyPressed){
+                for (i=0; i<45000; i++);        // Esperar el switch bounce
+                if (!(*pin_b & (1 << 4))) {     // Confirmar que sigue presionado
+                    serial_put_char('a');
+                }
+                alreadyPressed = 1; 
+            }else{
+                if(count <= 100){
+                    _delay_us(5000);
+                    count++;
+                }else{
+                    while (!(*pin_b & (1 << 4))){
+                        serial_put_char('a');
+                        _delay_us(40000);
+                    }
+                    count=0;
+                    alreadyPressed = 0;
+                }
+            }   
+        }else{
+            count=0;
+            alreadyPressed = 0;
+        }
+        */

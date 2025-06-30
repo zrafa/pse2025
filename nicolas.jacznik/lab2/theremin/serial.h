@@ -14,6 +14,6 @@
 void serial_init(void);
 void serial_put_char(char c);
 char serial_get_char(void);
-void serial_put_number(int val);
+
 
 #endif /* _SERIAL_H */

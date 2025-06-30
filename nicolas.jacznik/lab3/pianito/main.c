@@ -1,14 +1,5 @@
-/**********************************************************************
- *
- * main.c - the main program test file for the serial driver
- *
- **********************************************************************/
-
 #include "serial.h"
 #include "sound.h"
-
-
-
 
 int main(void)
 {
@@ -35,7 +26,7 @@ int main(void)
     
     while (rcvChar != 'q')
     {
-        //Wait for an incoming character 
+        //Esperar un caracter
         rcvChar = serial_get_char();
         switch (rcvChar) {
             case 'a':
@@ -72,4 +63,3 @@ int main(void)
     
     return 0;
 }
-
