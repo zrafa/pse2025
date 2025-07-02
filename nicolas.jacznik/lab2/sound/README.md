@@ -56,6 +56,10 @@ Este proyecto utiliza un Arduino Nano Pro con microcontrolador ATmega328p para g
 
 - Puedes modificar la función `sound` o cambiar las frecuencias y duraciones en el bucle principal para crear melodías personalizadas.
 
+## Video
+
+- Se puede ver un video del programa en ejecución mediante el siguiente enlace: https://drive.google.com/file/d/1n14VaDRapezmLa-QYcBFQic4TP0Jlzbw/view?usp=drive_link
+
 ## Notas adicionales
 
 - El sonido se genera accionando directamente el pin PB5 con retardos precisos usando `_delay_us` y `_delay_ms`.

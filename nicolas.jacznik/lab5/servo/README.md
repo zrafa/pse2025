@@ -83,6 +83,10 @@ Este proyecto implementa el control de un servo motor mediante un potenciómetro
 - **Salida UART:** Permite ver en la PC los valores en tiempo real para facilitar el ajuste del rango de PWM.
 - **Drivers modulares:** El ADC, PWM y comunicación serie están implementados como módulos independientes y reutilizables.
 
+## Video
+
+- Se puede ver un video del programa en ejecución mediante el siguiente enlace: https://drive.google.com/file/d/1vZgUOwn6ovCzLuWFkT18PmrCNj3UukxR/view?usp=sharing
+
 ## Notas adicionales
 
 - Puedes ajustar el rango de PWM (`duty`) en el código para adaptarlo a diferentes modelos de servos.

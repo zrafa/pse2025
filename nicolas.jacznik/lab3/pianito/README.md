@@ -63,6 +63,10 @@ La comunicación se realiza a 9600 bps, y la ejecución finaliza solo cuando se 
 3. Pulsa desde la PC las teclas 'a', 's', 'd', 'f', 'g', 'h', 'j', o 'k' para escuchar las notas DO, RE, MI, FA, SOL, LA, SI y DO (octava siguiente) respectivamente.
 4. Enviar 'q' por serie detendrá el bucle principal (aunque el microcontrolador seguirá en un bucle infinito sin más acción).
 
+## Video
+
+- Se puede ver un video del programa en ejecución mediante el siguiente enlace: https://drive.google.com/file/d/1XCASqiP1GHfsd_uos7CVFBJsPfeq3jjw/view?usp=sharing
+
 ## Notas adicionales
 
 - El driver serie (`serial.c` y `serial.h`) configura el UART a 9600 bps, 8 bits de datos y 1 bit de stop.

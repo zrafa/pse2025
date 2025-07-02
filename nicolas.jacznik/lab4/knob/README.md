@@ -65,6 +65,10 @@ Este proyecto implementa un "knob digital" usando un Arduino Nano Pro (ATmega328
 - Si el valor leído es bajo (potenciómetro hacia GND), se emite un tono grave; si es alto (hacia 5V), se emite un tono agudo.
 - El sistema lee el valor y actualiza la frecuencia de forma continua.
 
+## Video
+
+- Se puede ver un video del programa en ejecución mediante el siguiente enlace: https://drive.google.com/file/d/13AQIzMYTWUEA4JpearwHyCtTy4X9qMK5/view?usp=sharing
+
 ## Notas adicionales
 
 - El ADC está configurado con referencia AVcc, alineación a la izquierda, y prescaler 128 para mayor precisión.

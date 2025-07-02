@@ -96,6 +96,10 @@ Este proyecto **imita el funcionamiento de un protocolo UART asíncrono** (Unive
 - Puedes usar el programa incluido `pc.c` para leer los datos recibidos por el puerto serie y guardarlos en un archivo (por ejemplo, para transferir imágenes u otros archivos binarios).
 - Alternativamente, puedes usar cualquier programa de terminal serie a 9600 bps, 8N1 para monitorear los datos recibidos.
 
+## Video
+
+- Se puede ver una serie de videos del proyecto en ejecución mediante el siguiente enlace: https://drive.google.com/drive/folders/1Q49asss6XuVzDi_paeKP4AYkEDh89DL0?usp=sharing
+
 ## Notas adicionales
 
 - La confiabilidad de la recepción depende de la alineación del láser, el umbral de luz (`limite`) y la sincronización de retardos.

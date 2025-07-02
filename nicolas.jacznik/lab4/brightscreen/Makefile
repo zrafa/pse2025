@@ -1,7 +1,7 @@
 
 CC=avr-gcc
 OBJETOS=serial.o adc.o main.o
-APP=fotoresistencia
+APP=brightscreen
 CFLAGS=-Os -DF_CPU=16000000UL -mmcu=atmega328p 
 LDFLAGS=-mmcu=atmega328p
 FIRMWARE=imagen.hex

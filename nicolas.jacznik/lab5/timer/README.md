@@ -73,6 +73,10 @@ Este proyecto implementa un cronómetro digital utilizando un Arduino Nano Pro (
 - **Salida serial:** El driver serial está configurado para 9600 bps, 8 bits de datos, 1 bit de stop, sin paridad.
 - **Modularidad:** El temporizador y el serial están implementados como drivers separados para facilitar su reutilización.
 
+## Video
+
+- Se puede ver un video del programa en ejecución mediante el siguiente enlace: https://drive.google.com/file/d/1XRfqRv6Yp6sQZcHf86LwMk6CkiNDhJKT/view?usp=sharing
+
 ## Notas adicionales
 
 - Puedes modificar el código para añadir funciones de pausa, reinicio, o aumentar la precisión/cantidad de dígitos.

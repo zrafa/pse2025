@@ -68,6 +68,10 @@ Este proyecto implementa un "theremin digital" utilizando un Arduino Nano Pro (A
 - Puedes modificar la función `sound()` para cambiar la relación entre distancia y frecuencia, o ajustar la duración de las notas.
 - El sistema puede adaptarse para diferentes rangos o efectos musicales editando los parámetros en el código.
 
+## Video
+
+- Se puede ver un video del programa en ejecución mediante el siguiente enlace: https://drive.google.com/file/d/1ug-STjgGGsKl1S5TBPuwl2c0XPycYBgC/view?usp=sharing
+
 ## Notas adicionales
 
 - El sensor ultrasónico HC-SR04 se controla directamente accediendo a los registros de PORTB.

@@ -39,7 +39,7 @@ Este proyecto permite medir el valor de una fotorresistencia (sensor LDR) conect
    make
    ```
 
-   Esto generará el archivo ejecutable `fotoresistencia`.
+   Esto generará el archivo ejecutable `brightscreen`.
 
 ### Generar archivo HEX y grabar en el Arduino Nano Pro
 
@@ -80,6 +80,10 @@ Este proyecto permite medir el valor de una fotorresistencia (sensor LDR) conect
 - El sistema mide el valor analógico del pin A0 cada 500 ms y lo envía por serie en formato numérico.
 - El script de la PC lee el valor y ajusta el brillo automáticamente.
 - Puedes observar en la terminal el valor recibido y el cambio de brillo reportado por `brightnessctl`.
+
+## Video
+
+- Se puede ver un video del programa en ejecución mediante el siguiente enlace: https://drive.google.com/file/d/1dtPZTfkGgeHKJ96C1lcWHb1FY_EZ3EVs/view?usp=sharing
 
 ## Notas adicionales
 

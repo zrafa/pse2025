@@ -55,6 +55,10 @@ Este proyecto consiste en encender y apagar un LED conectado al pin digital 13 d
 - Luego de cargar el programa, el LED conectado al pin 13 parpadeará con un período aproximado de 1 segundo encendido y 1 segundo apagado.
 - El retardo se implementa por software utilizando un bucle vacío.
 
+## Video
+
+- Se puede ver un video del programa en ejecución mediante el siguiente enlace: https://drive.google.com/file/d/1L8pdtGzq6BP9bIMb5RbvvUasUHv4MXZJ/view?usp=sharing
+
 ## Notas adicionales
 
 - Se accede a los registros de control y datos de PORTB de forma directa para configurar y manipular el pin.

@@ -57,6 +57,10 @@ Este proyecto controla una secuencia de encendido y apagado de LEDs conectados a
 
 - Puedes modificar el arreglo `ledPos` en el código para experimentar con diferentes patrones de animación y velocidad.
 
+## Video
+
+- Se puede ver un video del programa en ejecución mediante el siguiente enlace: https://drive.google.com/file/d/1bTB1qeYUjMVnyuiGIdmJ5kBiswrkNFxb/view?usp=sharing
+
 ## Notas adicionales
 
 - Se accede a los registros de control y datos de PORTB directamente para manipular la salida de los pines.

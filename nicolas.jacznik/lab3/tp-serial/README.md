@@ -63,6 +63,10 @@ Este proyecto implementa un eco de caracteres utilizando el microcontrolador ATm
 3. Al iniciar, el Arduino enviará el mensaje "start".
 4. Cada tecla que envíes desde la PC será devuelta (eco) junto con un salto de línea. Cuando envíes la tecla 'q', el programa dejará de responder (quedando en un bucle infinito).
 
+## Video
+
+- Se puede ver un video del programa en ejecución mediante el siguiente enlace: https://drive.google.com/file/d/1Khyc9AWxs9WCZTNkx6JfGQQ1o39NPr_g/view?usp=sharing
+
 ## Notas adicionales
 
 - El driver serie (`serial.c` y `serial.h`) configura el UART a 9600 bps, 8 bits de datos y 1 bit de stop.
