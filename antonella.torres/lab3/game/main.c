@@ -38,9 +38,7 @@ int main (void){
 
     while (1) {
         if ((*pin_b & (1 << 1)) == 0 && (*pin_b & (1 << 2)) == 0) {  
-               
             esperar(50);                
-
             // mientras no se soltaron los botones espero
             while ((*pin_b & (1 << 1)) == 0 && (*pin_b & (1 << 2)) == 0);
             esperar(50);         
@@ -53,6 +51,8 @@ int main (void){
                 esperar(50);                
                 // mientras no se solto el boton espero
                 while ((*pin_b & (1 << 1)) == 0);
+                
+                
                 esperar(50);               
                 serial_put_char('D');    
             }

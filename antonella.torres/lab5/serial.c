@@ -10,6 +10,7 @@
  **********************************************************************/
 
 #include <stdint.h> /* para los tipos de datos. Ej.: uint8_t */
+#include "serial.h"
 
 
 /* Completar la estructura de datos para que se superponga a los registros

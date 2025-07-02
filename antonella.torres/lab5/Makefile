@@ -7,7 +7,7 @@ LDFLAGS = -mmcu=atmega328p
 
 # Archivos
 APP = adc
-OBJETOS = main.o adc.o serial.o 
+OBJETOS = main.o adc.o timer2_pwm.o serial.o
 FIRMWARE = $(APP).hex
 
 # Objetivo por defecto

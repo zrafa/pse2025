@@ -40,15 +40,24 @@ void init() {
 		volatile unsigned char actual;
 		while (1) {
 
-			while ((*pin_b & (1 << 1)) == 1);  
+
+			while ((*pin_b & (1 << 1)) != 0);  
 			esperar(50);
-			while ((*pin_b & (1 << 1)) ==0 );  
+			while ((*pin_b & (1 << 1)) != 1);  
+
 			*port_b ^= (1 << 2);	
 
 
 			esperar(100);
 			esperar(100);
-	
+			esperar(100);
+			esperar(100);
+			esperar(100);
+			esperar(100);
+			esperar(100);
+
+			*port_b &= ~(1 << 2);	
+
 
 		
 		}
