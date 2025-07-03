@@ -1,0 +1,1 @@
+void sound(int frec, int duracion);

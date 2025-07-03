@@ -1,0 +1,39 @@
+Source: sdl-ball
+Section: games
+Priority: optional
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Uploaders: Evgeni Golov <evgeni@debian.org>
+Build-Depends:
+ debhelper-compat (= 13),
+ libgl-dev,
+ libglu1-mesa-dev | libglu-dev,
+ libsdl-image1.2-dev,
+ libsdl-mixer1.2-dev,
+ libsdl-ttf2.0-dev,
+Rules-Requires-Root: no
+Standards-Version: 4.6.2
+Homepage: https://sdl-ball.sourceforge.net/
+Vcs-Git: https://salsa.debian.org/games-team/sdl-ball.git
+Vcs-Browser: https://salsa.debian.org/games-team/sdl-ball
+
+Package: sdl-ball
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, sdl-ball-data (= ${source:Version})
+Description: brick-breaking game like DX-Ball/Arkanoid
+ Your mission: To smash your way through a series of progressively harder
+ and more tricky levels.
+ Your tools: Ultrakinetic titanium balls and your trusty
+ Gruntmazter-3000-Paddle edition.
+
+Package: sdl-ball-data
+Architecture: all
+Multi-Arch: foreign
+Depends: fonts-alee, ${misc:Depends}
+Description: brick-breaking game like DX-Ball/Arkanoid - data files
+ Your mission: To smash your way through a series of progressively harder
+ and more tricky levels.
+ Your tools: Ultrakinetic titanium balls and your trusty
+ Gruntmazter-3000-Paddle edition.
+ .
+ This package contains arch-independent data files for sdl-ball (images,
+ sounds, levels, etc).

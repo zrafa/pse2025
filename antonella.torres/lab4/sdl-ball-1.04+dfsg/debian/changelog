@@ -1,0 +1,109 @@
+sdl-ball (1.04+dfsg-2) unstable; urgency=medium
+
+  * Team Upload
+
+  [ Helmut Grohne ]
+  * Fix FTCBFS: strips with the build architecture strip (Closes: #1085102)
+
+ -- Alexandre Detiste <tchet@debian.org>  Wed, 16 Oct 2024 09:48:24 +0200
+
+sdl-ball (1.04+dfsg-1) unstable; urgency=medium
+
+  * Team upload
+  * import game on Salsa
+  * New upstream version 1.04
+  * repack to remove vendored win32 dll & level editor
+  * define Rules-Rerquires-Root: no
+  * switch to debhelper 13
+  * remove old menu file & build-dep on ImageMagick
+
+  [ Janitor ]
+  * Use secure copyright file specification URI.
+  * Use secure URI in Homepage field.
+  * Refer to specific version of license GPL-3, GPL-3+.
+
+ -- Alexandre Detiste <tchet@debian.org>  Wed, 03 Jan 2024 18:50:27 +0100
+
+sdl-ball (1.02-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * use https for vsc-browser
+  * Standards-Version: 4.0.0
+
+ -- Evgeni Golov <evgeni@debian.org>  Sun, 23 Jul 2017 14:35:41 +0200
+
+sdl-ball (1.02-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Drop obsolete patches:
+    - debian/patches/gcc-4.7-ftbfs.patch
+    - debian/patches/gcc-4.8-ftbfs.patch
+  * Use upstream's sdl-ball.desktop
+  * Standards-Version: 3.9.6
+  * Depend on fonts-alee instead of ttf-alee (Closes: #768604)
+
+ -- Evgeni Golov <evgeni@debian.org>  Sun, 16 Nov 2014 14:18:06 +0100
+
+sdl-ball (1.01-4) unstable; urgency=low
+
+  * Fix FTBFS with gcc 4.8 due to stray ‘,’.
+    Thanks: Juhani Numminen <juhaninumminen0@gmail.com>
+    Closes: #701355
+  * Use canonical URLs in Vcs-* entries.
+  * Use debhelper 9 compat.
+  * Honour CPPFLAGS from dpkg-buildflags to properly harden the build.
+  * Standards-Version: 3.9.4
+  * Improve the desktop file.
+
+ -- Evgeni Golov <evgeni@debian.org>  Sun, 23 Jun 2013 14:09:01 +0200
+
+sdl-ball (1.01-3) unstable; urgency=low
+
+  * Fix FTBFS due to wrong use of the override targets of dh.
+    Thanks: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>
+    Closes: #673938
+
+ -- Evgeni Golov <evgeni@debian.org>  Sun, 27 May 2012 12:53:43 +0200
+
+sdl-ball (1.01-2) unstable; urgency=low
+
+  [ Evgeni Golov ]
+  * Update my email address.
+  * Use dh rules.tiny
+  * format 3.0 (quilt)
+  * Standards-Version: 3.9.3
+  * Update debian/changelog to the latest format specification.
+  * Fix a small spelling typo (Dont → Don't) in the game, thanks lintian.
+
+  [ Cyril Brulebois ]
+  * Fix FTBFS with gcc 4.7 by fixing missing <unistd.h> include
+    (Closes: #667368).
+
+ -- Evgeni Golov <evgeni@debian.org>  Tue, 15 May 2012 07:09:01 +0200
+
+sdl-ball (1.01-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright:
+    + Fix the link to upstream source, this is sdl-ball, not sdl-jump.
+      Closes: #509621.
+    + Add copyright information for the dio-theme.
+    + Update copyright years.
+
+ -- Evgeni Golov <sargentd@die-welt.net>  Thu, 22 Jan 2009 19:00:10 +0100
+
+sdl-ball (0.14-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules:
+    + Use themes/default/icon32.png instead of icon32.png as the icon.
+  * debian/control:
+    + Add ${misc:Depends} to Depends of sdl-ball-data to please lintian.
+
+ -- Evgeni Golov <sargentd@die-welt.net>  Mon, 08 Dec 2008 09:41:38 +0100
+
+sdl-ball (0.13-1) unstable; urgency=low
+
+  * Initial release (Closes: #505447)
+
+ -- Evgeni Golov <sargentd@die-welt.net>  Wed, 12 Nov 2008 14:25:49 +0100

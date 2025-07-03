@@ -1,0 +1,41 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: SDL-Ball
+Upstream-Contact: Jimmy Christensen <dusted at dusted dot dk>
+Source: http://sourceforge.net/projects/sdl-ball/
+Files-Excluded:
+ leveleditor/gimp-leveleditor/gimp-sdlball
+ win32/*
+
+Files: *
+Copyright: © 2008-2009 Jimmy Christensen <dusted at dusted dot dk>
+License: GPL-3+
+
+Files: debian/*
+Copyright: © 2008-2012 Evgeni Golov <evgeni@debian.org>
+License: GPL-3+
+
+Files: themes/default/font/Bandal.ttf
+Copyright: © 2006 A Lee <alee@debian.org>
+License: Artistic
+
+Files: themes/default/font/subgamefont.ttf
+Copyright: © 2007 Stephen Branley <yottskry@users.sourceforge.net>
+License: GPL-2
+
+Files: themes/dio-sound-theme/*
+Copyright: © 2008-2009 dionos <dionos [at] pandora.be>
+License: GPL-3
+ On Debian systems, the full text of the GNU General Public License
+ can be found in the `/usr/share/common-licenses/GPL-3' file.
+
+License: GPL-3+
+ On Debian systems, the full text of the GNU General Public License
+ can be found in the `/usr/share/common-licenses/GPL-3' file.
+
+License: GPL-2
+ On Debian systems, the full text of the GNU General Public License
+ version 2 can be found in the `/usr/share/common-licenses/GPL-2' file.
+
+License: Artistic
+ On Debian systems, the complete text of the Artistic License can be
+ found in the /usr/share/common-licenses/Artistic file.
