@@ -102,6 +102,10 @@ Este proyecto implementa la reproducción de audio digital (archivos WAV) usando
 - **Mapeo de muestra:** Cada byte recibido se escala al rango del PWM para obtener la amplitud correspondiente.
 - **Filtro RC:** Recomendado para suavizar la señal PWM antes del parlante.
 
+## Video
+
+- Se puede ver un video del programa en ejecución mediante el siguiente enlace: https://drive.google.com/file/d/1qZqGPI0hGk5XLXNKTk9zMRkC2Gol4z8m/view?usp=sharing
+
 ## Notas adicionales
 
 - El audio debe estar en formato WAV, mono, 8 bits sin compresión.
