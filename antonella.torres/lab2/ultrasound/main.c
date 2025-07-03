@@ -8,40 +8,12 @@
 #define __DELAY_BACKWARD_COMPATIBLE__
 #define F_CPU   16000000UL
 #include <util/delay.h>
-// Notas en Hz
-#define C4  262
-#define D4  294
-#define E4  330
-#define F4  349
-#define G4  392
-
-int main(void)
-{
-
-    while (1) {
-		sound(659, 400);  // E5
-        _delay_ms(150);
-        sound(659, 400);  // E5
-        _delay_ms(150);
-        sound(0, 400);    // silencio
-        _delay_ms(150);
-        sound(659, 400);  // E5
-        _delay_ms(150);
-        sound(0, 400);
-        _delay_ms(150);
-        sound(523, 400);  // C5
-        _delay_ms(150);
-        sound(659, 400);  // E5
-        _delay_ms(150);
-        sound(784, 600);  // G5
-        _delay_ms(400);
-
-        sound(392, 800);  // G4
-        _delay_ms(600);
-    }
 
 
-	/*
+
+int main(void){
+    init_ultrasound();
+
 	int dist_cm = 8;
 
 	serial_init();
@@ -64,6 +36,5 @@ int main(void)
 		
 			_delay_ms(1000);  
 		}
-		*/
 }
 
