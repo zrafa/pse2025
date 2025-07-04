@@ -16,7 +16,7 @@ void sound(long int frec, long int duracion);
 void main()
 {
 	volatile uint16_t val, len;
-	volatile uint32_t extra;
+	volatile uint16_t extra;
 	volatile int duration_nota;
 	duration_nota = 1000 / (8*3);
 
@@ -27,11 +27,11 @@ void main()
 		/* obtener una conversión ADC desde el pin de entrada ADC 0 */
 		val = adc_get(3);
 		/* realizar alguna acción con val */
-		extra = ((uint32_t)val * 10000) / 1023;
+		extra = (uint16_t)val;
 		serial_put_int(extra, 10);
 		serial_put_char('\r');
     	serial_put_char('\n');
-		sound(NOTE_C6+extra, duration_nota);
+		sound(NOTE_C4+extra, duration_nota);
 
 	}
 }
@@ -53,14 +53,14 @@ void sound(long int frec, long int duracion){
 	const long int half_time_cicle = time_cicle / 2;
 
 	if(frec == 0){
-		wait(tiempo);
+		_delay_us(tiempo);
 	}
 	else{
 		while(count_cicle < tiempo){
 			write_signal_B(sound_pin, 1);
-			wait(half_time_cicle);
+			_delay_us(half_time_cicle);
 			write_signal_B(sound_pin, 0);
-			wait(half_time_cicle);
+			_delay_us(half_time_cicle);
 			count_cicle += time_cicle;
 		}
 	}

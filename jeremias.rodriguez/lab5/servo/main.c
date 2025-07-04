@@ -23,9 +23,10 @@ int main(void) {
 
     while (1) {
         adc_val = adc_get(3);
-        angle = map(adc_val,0,255,1000,3500);
+        //angle = map(adc_val,0,255,1000,3500);
+        angle = map(adc_val,0,1023,0,5000);
         servo_angulo(angle);
-        serial_put_int(angle, 4);
+        serial_put_int(adc_val, 4);
         serial_put_char('\r');
         serial_put_char('\n');
         _delay_ms(50);

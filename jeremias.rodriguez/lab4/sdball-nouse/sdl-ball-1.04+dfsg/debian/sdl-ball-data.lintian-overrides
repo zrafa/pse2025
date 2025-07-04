@@ -1,2 +1,0 @@
-# game levels assets, not documentation
-package-contains-documentation-outside-usr-share-doc [usr/share/games/sdl-ball/default/*.txt]

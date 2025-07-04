@@ -30,13 +30,13 @@ void adc_init()
 {
     /* Configurar los registros ADMUX y ADCSRA para utilizar el voltaje
     de vcc con capacitor externo y encender (habilitar) el periferico */
-    adc->admux |= (1 << 6) | (1 << 5);
+    adc->admux |= (1 << 6);
     adc->adcsra |= (1 << 7);
     /* Establecer tambien el prescalar para lograr un valor acorde (divisor) */
     adc->adcsra |= (1 << 2) | (1 << 1) | (1 << 0);
 }
 
-uint8_t adc_get(char input)
+uint16_t adc_get(char input)
 {
     int val;
     /* 1. Selects which analog input is connected to the ADC */
@@ -47,7 +47,7 @@ uint8_t adc_get(char input)
     while(!((adc->adcsra) & (1 << 6)));
     /* 4. When conversion is complete, read the data register */
     /* IMPORTANT: ADCL must be read first, then ADCH */
-    val = (uint8_t) adc->adch;
+    val = ((uint16_t) adc->adcl) | (((uint16_t) adc->adch) << 8);
     /* return the value */
     return val;
 }

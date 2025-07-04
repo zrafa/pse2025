@@ -6,6 +6,10 @@
 #include "frecuencias.h"
 #include <util/delay.h>
 
+#define SEG_IN_MILLIS 1000
+#define SEG_IN_MICRO 1000000
+#define SPEED 1.30
+
 volatile unsigned char sound_pin = 0b00010000;
 
 
@@ -44,9 +48,9 @@ int main(void)
     volatile int duration_nota, pausa_entre_notas;
 	config_sound();
     for (i = 0; i < size / sizeof(melody[0]); i++) {
-        duration_nota = 1000 / (noteDurations[i]);
+        duration_nota =  SEG_IN_MILLIS / (noteDurations[i]);
         sound(melody[i], duration_nota);
-        pausa_entre_notas = duration_nota * 1.30;
+        pausa_entre_notas = duration_nota * SPEED;
         _delay_us(pausa_entre_notas);
       }
 }
@@ -61,9 +65,9 @@ void config_sound(){
     duracion --> millisegundos
     */
 void sound(long int frec, long int duracion){
-    volatile long int tiempo = duracion*1000;
+    volatile long int tiempo = duracion*SEG_IN_MILLIS;
     volatile long int count_cicle = 0;
-    volatile long int time_cicle = ((1.0 / frec)*1000000);
+    volatile long int time_cicle = ((1.0 / frec)*SEG_IN_MICRO);
     const long int half_time_cicle = time_cicle / 2;
 
     if(frec == 0){

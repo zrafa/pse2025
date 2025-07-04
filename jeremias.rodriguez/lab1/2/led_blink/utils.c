@@ -6,7 +6,6 @@
  * pines 8-13 de arduino 
  */
 #define LED_ROJO (0x20) /* 0b00100000 */
-
 /* puertos de E/S */
 
 /* direccion de PORTB (registro de datos) */
@@ -22,7 +21,7 @@ volatile unsigned char * pin_b = (unsigned char *) 0x23;
 void esperar() {
 	volatile unsigned long i;
 	/* delay de aprox. 1 segundo */
-	for (i=0; i<450000; i++);
+	for (i=0; i<450; i++);
 }
 
 /* led_init: configura el puerto b bit 5 como salida */

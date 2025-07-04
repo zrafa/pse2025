@@ -4,7 +4,9 @@
 #include "serial.h"
 #include "pin_config.h"
 
-volatile unsigned long int nota_do = 2093;
+#define SEG_IN_MILLIS 1000
+
+volatile unsigned long int nota_do = 261;
 volatile unsigned char sound_pin = 0b00010000;
 
 
@@ -19,7 +21,7 @@ int main(void)
 	volatile int size = 12, i = 0;
 	config_sound();
 
-	sound(nota_do,1000);/*
+	sound(nota_do,SEG_IN_MILLIS);/*
 	while(1){
 		_delay_ms(1000);
 		sound(nota_do,1000);

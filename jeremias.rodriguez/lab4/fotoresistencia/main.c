@@ -5,14 +5,13 @@
 #include "serial.h"
 #include "pin_config.h"
 
-uint16_t convert(uint16_t x, uint16_t in_min, uint16_t in_max, uint8_t out_min, uint8_t out_max) ;
 
 void main()
 {
-	uint16_t val, show;
+	uint16_t val;
 	adc_init();
 	serial_init();
-	_delay_ms(1000);
+
 	while (1) {
 		val = 0;
 		/* obtener una conversión ADC desde el pin de entrada ADC 0 */
@@ -23,10 +22,4 @@ void main()
     	serial_put_char('\n');
 		_delay_ms(1000);
 	}
-}
-
-uint16_t convert(uint16_t x, uint16_t in_min, uint16_t in_max, uint8_t out_min, uint8_t out_max) {
-		if (x < in_min) x = in_min;
-		if (x > in_max) x = in_max;
-		return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }

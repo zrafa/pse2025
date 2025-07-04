@@ -7,16 +7,17 @@
  */
 
 #include "utils.h"
+#include "delay.h"
 
 int main(void)
 {	
 	led_init();
 
 	while (1) {
-		esperar();
+		delay_ms(100);
 		led_on();
 
-		esperar();
+		delay_ms(100);
 		led_off();
     }
 }

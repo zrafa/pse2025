@@ -11,6 +11,6 @@
  #define _ADC_H
  
  void adc_init(void);
- uint8_t adc_get(char);
+ uint16_t adc_get(char);
  
  #endif /* _SERIAL_H */

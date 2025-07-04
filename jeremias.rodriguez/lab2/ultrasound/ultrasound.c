@@ -7,17 +7,16 @@
 #include <util/delay.h>
 #include "pin_config.h"
 
+#define TIME_LIMIT 36000
 
 volatile unsigned char trigger_pin = 0b00000001;
 volatile unsigned char echo_pin = 0b00000010;
-volatile unsigned char pin_5 = 0b00100000;
 
 volatile int signal;
 
 void start_ultrasound(){
 	make_input_DDRB(echo_pin);
 	make_output_DDRB(trigger_pin);
-	make_output_DDRB(pin_5);
 }
 
 /* ultrasound_get_distance()
@@ -38,13 +37,13 @@ int ultrasound_get_distance(void)
 	write_signal_B(trigger_pin, 0);
 	
 	while((read_signal_B(echo_pin)) == 0){}
-	while((read_signal_B(echo_pin)) != 0 && tiempo < 36000){
+	while((read_signal_B(echo_pin)) != 0 && tiempo < TIME_LIMIT){
 		_delay_us(1);
 		tiempo++;
 	}
 
-	if(tiempo < 36000){
-		i = tiempo/14;
+	if(tiempo < TIME_LIMIT){
+		i = tiempo/14; //Por la formula
 	}
 
 	return i;
