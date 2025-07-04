@@ -40,20 +40,25 @@ void adc_init()
         /* Establecer tambien el prescalar para lograr un valor acorde (divisor) */
 }
 
-uint8_t adc_get(volatile char input)
+int adc_get(volatile char input)
 {
         //Adlar modo 8 bits
-        adc->admux = (adc->admux | 0b00100000) | (input);
+        adc->admux = (adc->admux | 0b00100000) | 0b00000011;
 
+        /* 2. Write this bit to one to start each conversion */
         adc->adcsra = adc->adcsra | 0b01000000;
+
         while (adc->adcsra & 0b01000000)
         {
-               
+                /* code */
         }
         
+        /* 3. When conversion is complete, it returns to zero */
 
+        /* 4. When conversion is complete, read the data register */
+        /* IMPORTANT: ADCL must be read first, then ADCH */
         uint8_t low = adc->adcl;
         uint8_t high = adc->adch;
         return high;
-
+	/* return the value */
 }

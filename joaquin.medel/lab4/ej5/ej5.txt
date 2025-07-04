@@ -1,0 +1,2 @@
+Perdi el codigo del knob que movia y con un boton tiraba la bola , pero el profesor vio en clase que yo lo realice y que funcionaba
+pero el codigo trataba de mandar 7 bits del knob y 1 del boton eso decodificarlo por serial en la pc y con xdotoll mandar los input

@@ -85,14 +85,14 @@ int main()
         {
             printf("Presiono L\n");
             fflush(stdout);
-            //system(XDOTOOL_KEYDOWN(charL));
+            system(XDOTOOL_KEYDOWN(charL));
             Lpressed = 1;
         }
         else if (Lpressed && !buttonL)
         {
             printf("Dejo de presionar L\n");
             fflush(stdout);
-            //system(XDOTOOL_KEYUP(charL));
+            system(XDOTOOL_KEYUP(charL));
             Lpressed = 0;
         }
     }

@@ -9,7 +9,7 @@
 #define umbral 0x50
 #define msCiclo 75
 #define msInicial 75
-
+// Uso de fotoresistencia pero para comunicacion con laser
 unsigned volatile char buttonR = 0b00000001;
 unsigned volatile char buttonL = 0b00000010;
 void main_init()
