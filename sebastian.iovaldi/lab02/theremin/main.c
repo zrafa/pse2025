@@ -1,8 +1,4 @@
-/*
- * ultrasound: programa que controla el HC-SR04 para medir distancias en cm
- */
 
- #include "serial.h"
  #include "ultrasound.h"
  
  #define __DELAY_BACKWARD_COMPATIBLE__
@@ -68,13 +64,8 @@ float escalaFrigia[] = {
 int main(void)
 {
     int dist_cm = 8;
-    serial_init();
     ultrasound_init();
 
-     /* Ejemplo de uso de la biblioteca serial */
-         serial_put_str("HOLA MUNDO \r\n");
-            serial_put_int(dist_cm, 4);	/* Mostrar distancia */
-     
      /* un programa embebido nunca finaliza */
 
      int running = 0;

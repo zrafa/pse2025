@@ -19,8 +19,6 @@ void trigger()
     *port_c |= BIT2;
     _delay_us(10);
     *port_c &= ~BIT2;
-
-   // *ddr_c |= BIT3;
 }
 
 int echo()

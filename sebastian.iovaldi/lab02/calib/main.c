@@ -13,10 +13,10 @@ int main(void)
 	led_init();
 
 	while (1) {
-		esperar(1);
+		esperar();
 		led_on();
 
-		esperar(1);
+		esperar();
 		led_off();
     	}
 }

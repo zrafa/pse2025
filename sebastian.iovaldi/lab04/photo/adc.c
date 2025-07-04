@@ -52,20 +52,10 @@ typedef struct
  
 uint8_t adc_get(char input)
 {
-    /* 1. Selects which analog input is connected to the ADC */
-
-    /* 2. Write this bit to one to start each conversion */
-
     adc->sra |= ADSC;
-
-    /* 3. When conversion is complete, it returns to zero */
-
     while(adc->sra & ADSC);
-
-    /* 4. When conversion is complete, read the data register */
-    /* IMPORTANT: ADCL must be read first, then ADCH */
+    
     uint8_t value = adc->high;
-    /* return the value */
     return value;
 }
  

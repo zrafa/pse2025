@@ -1,2 +1,0 @@
-gcc -lSDL3 main.c input.c render.c serial.c
-stty -F /dev/ttyUSB0 2400 cs8 -cstopb -parenb

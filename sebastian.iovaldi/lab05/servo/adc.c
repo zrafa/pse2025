@@ -11,7 +11,6 @@
  
  /* Estructura de datos del driver ADC */
 
-
 #define REFS0 0x40
 #define REFS1 0x80
 #define ADEN  0x80
@@ -36,10 +35,8 @@ typedef struct
  {
     adc->mux |= REFS0;
     adc->mux &= ~REFS1;   /* external  */
-    adc->mux &= ~0b1111; /* adc0 */
-
+    adc->mux &= ~0b1111;  /* adc0 */
     adc->mux |= 0b100000;
-
     adc->sra |=  ADEN;
     adc->sra |=  0b101;
     adc->sra &= ~0b010;

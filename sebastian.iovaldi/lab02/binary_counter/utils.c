@@ -5,6 +5,8 @@
 #define BIT1 2
 #define BIT2 4
 #define BIT3 8
+#define BIT4 16
+#define BIT5 32
 
 /* direccion de PORTB (registro de datos) */
 volatile unsigned char * puerto_b = (unsigned char *) 0x25;
@@ -35,14 +37,14 @@ void wait(unsigned long frames)
 void init() 
 {
 	*ddr_c = 0x00;
-	*puerto_c |= 32;
+	*puerto_c |= BIT5;
 	*puerto_b = 0x0;
 	*ddr_b |= (BIT0 | BIT1 | BIT2 | BIT3);
 }
 
 int not_pushed()
 {
-	return *pin_c & 32;
+	return *pin_c & BIT5;
 }
 void set_leds(unsigned char bits)
 {

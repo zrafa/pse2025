@@ -42,7 +42,7 @@ void ultrasound_init()
     *ddr_b |= 0b1111;
     *puerto_b = 0x00;
     *puerto_c |= BIT5;
-
+    *ddr_c |= BIT4;
 }
 
 void trigger()
@@ -50,9 +50,6 @@ void trigger()
     *puerto_c |= BIT2;
     _delay_us(10);
     *puerto_c &= ~BIT2;
-
-    *ddr_c |= BIT4;
-
 }
 
 int echo()

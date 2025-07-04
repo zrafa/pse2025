@@ -26,7 +26,6 @@ void setCompareA(volatile uint16_t a){
     timer16b->compareAL = (a & 0xFF); // Parte baja de OCR1A
 }
 
-
 void setCompareB(volatile uint16_t a){
     timer16b->compareBH = (a >> 8);   // Parte alta de OCR1A
     timer16b->compareBL = (a & 0xFF); // Parte baja de OCR1A

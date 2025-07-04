@@ -17,9 +17,9 @@ int main()
 
 		/* realizar alguna acción con val */
         led_on();
-        _delay_ms(500);
+        _delay_ms(100);
       //  led_off();
-        _delay_ms(500);
+     //   _delay_ms(500);
 
         serial_put_char(val);
 	}

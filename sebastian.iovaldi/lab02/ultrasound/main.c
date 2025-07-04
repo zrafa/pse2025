@@ -17,31 +17,18 @@ int main(void)
 
      /* Ejemplo de uso de la biblioteca serial */
          serial_put_str("HOLA MUNDO \r\n");
-            serial_put_int(dist_cm, 4);	/* Mostrar distancia */
      
      /* un programa embebido nunca finaliza */
      for (;;) {
-         serial_put_str("HOLA MUNDO \r\n");
- 
-            dist_cm = ultrasound_get_distance();
-          //  serial_put_int(dist_cm, 4);	/* Mostrar distancia */
-          //  serial_put_str("\r\n");
- 
-       //  _delay_ms(1000);
-          
-      //  if(dist_cm < 20)
-       //     set_leds(0b1111);
-       
-   //     if(dist_cm == -1)
-     //       set_leds(0b0000);
+        dist_cm = ultrasound_get_distance();
+        serial_put_int(dist_cm, 4);	/* Mostrar distancia */
+
         if(dist_cm < 10)
             set_leds(0b1111);
         else 
             set_leds(0b0000);
 
     _delay_ms(100);
-
-            
     }
  }
  

@@ -1,6 +1,6 @@
 
 CC=avr-gcc
-OBJETOS=ultrasound.o serial.o main.o
+OBJETOS=ultrasound.o main.o
 APP=theremin
 CFLAGS=-Os -DF_CPU=8000000UL -mmcu=atmega328p 
 LDFLAGS=-mmcu=atmega328p
